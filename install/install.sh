@@ -106,3 +106,8 @@ sudo rm "$ROOT/install/pgdump/gisdb2016.dump" > /dev/null
 
 echo "Creando wmsURL.js"
 echo "var \$wmsURL = '$WMS_URL';" > "$ROOT/public_html/js/wmsURL.js"
+
+echo "Abriendo browser..."
+nohup sensible-browser "http://127.0.0.1" > /dev/null &
+
+echo "Ya podes probar el sitio http://127.0.0.1"

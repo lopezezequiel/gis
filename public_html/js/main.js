@@ -36,17 +36,18 @@ var map = new ol.Map({
 	})
 });
 
-var layersControl = document.getElementById('layers');
+var layersBox = document.getElementById('layersBox');
+var statusBar = document.getElementById('statusBar');
 
 $.each($data.layers, function(index, layerData) {
 	var layer = createLayer(layerData);
 	map.addLayer(layer);
 
 	var checkbox = createLayerCheckBox(layerData);
-	layersControl.appendChild(checkbox);
+	layersBox.appendChild(checkbox);
 
 	var label = createCheckBoxLabel(layerData);
-	layersControl.appendChild(label);
+	layersBox.appendChild(label);
 	
 	$(checkbox).change(function() {
 		layer.setVisible($(this).is(":checked"));        
@@ -54,5 +55,32 @@ $.each($data.layers, function(index, layerData) {
 })
 
 
+var selectInteraction = new ol.interaction.DragBox(
+                    {
+                        condition: ol.events.condition.shiftKeyOnly,
+                        style: new ol.style.Style({
+                            stroke: new ol.style.Stroke({
+                                color: [0, 0, 255, 1]
+                            })
+                        })
+                    }
+            );
+            
+map.addInteraction(selectInteraction);
+
+selectInteraction.on('boxend', function (evt) {
+	statusBar.innerHTML = selectInteraction.getGeometry().getCoordinates();
+});
 
 
+var mousePositionControl = new ol.control.MousePosition({
+        coordinateFormat: ol.coordinate.createStringXY(4),
+        projection: 'EPSG:4326',
+        // comment the following two lines to have the mouse position
+        // be placed within the map.
+        className: 'custom-mouse-position',
+        target: document.getElementById('mousePosition'),
+        undefinedHTML: '&nbsp;'
+      });
+
+map.addControl(mousePositionControl);
