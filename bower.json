@@ -1,0 +1,15 @@
+{
+  "name": "gis2016",
+  "version": "0.1.0",
+  "dependencies": {
+    "ol3": "ol3-bower#^3.18.2",
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7"
+  },
+  "install": {
+    "path": {
+      "js": "/js/",
+      "css": "/css/"
+    }
+  }
+}

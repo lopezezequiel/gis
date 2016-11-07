@@ -6,6 +6,5 @@ trabajo integrador de gis 2016
 Para instalar las dependencias necesarias y crear la base de datos ejecutar:
 
 ```bash
-cd install
-./install.sh
+./install/install.sh
 ```

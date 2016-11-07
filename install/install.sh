@@ -25,20 +25,15 @@ VIRTUALHOST_NAME=gis2016.conf
 VIRTUALHOST_CONF="
 <VirtualHost *:80>
 	ServerAdmin mail@lopezezequiel.com
-	DocumentRoot $VIRTUALHOST_ROOT
+        DocumentRoot $VIRTUALHOST_ROOT
 	DirectoryIndex index.html
 
- 	<Directory />
-		Options FollowSymLinks
+	<Directory $VIRTUALHOST_ROOT>
+		#Options Indexes FollowSymLinks
 		AllowOverride None
-	</Directory>
-
-	<Directory \"$VIRTUALHOST_ROOT\">
-		Options Indexes FollowSymLinks MultiViews
-		AllowOverride None
-		Order allow,deny
 		Require all granted
 	</Directory>
+
 
 	ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
 	<Directory \"/usr/lib/cgi-bin/\">
@@ -59,7 +54,7 @@ for D in apache2 qgis qgis-mapserver libapache2-mod-fcgid postgresql postgresql-
 do
 	if [ $(isInstalled $D) -eq 0 ];
 	then
-		echo "	- Instalando $D...";
+		echo "Instalando $D...";
 		sudo apt-get -y install $D > /dev/null;
 	fi
 done
@@ -82,8 +77,8 @@ sudo a2ensite $VIRTUALHOST_NAME > /dev/null
 #sudo echo "127.0.0.10 $VIRTUALHOST_DOMAIN" >> /etc/hosts > /dev/null
 
 echo "Reiniciando apache2..."
-sudo service apache2 restart > /dev/null
-exit
+sudo service apache2 reload > /dev/null
+
 echo "Seteando 'postgres' como contraseña para el usuario 'postgres'"
 sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'postgres';" > /dev/null
 
@@ -100,10 +95,10 @@ CREATE DATABASE $PG_DB
 sudo -u postgres psql -d $PG_DB -c "CREATE EXTENSION postgis" > /dev/null
 
 echo "Descomprimiendo datos..."
-sudo 7z x -y pgdump/gisdb2016.dump.7z.001 > /dev/null
+sudo 7z x -y -o"$ROOT/install/pgdump" "$ROOT/install/pgdump/gisdb2016.dump.7z.001" > /dev/null
 
 echo "Cargando base de datos..."
-sudo -u postgres psql -v ON_ERROR_STOP=1 -d $PG_DB < gisdb2016.dump > /dev/null
+sudo -u postgres psql -v ON_ERROR_STOP=1 -d $PG_DB < "$ROOT/install/pgdump/gisdb2016.dump" > /dev/null
 
 echo "Removiendo archivos temporales..."
-sudo rm gisdb2016.dump > /dev/null
+sudo rm "$ROOT/install/pgdump/gisdb2016.dump" > /dev/null
