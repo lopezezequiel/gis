@@ -1,4 +1,60 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 #map {
-	height: 400px;
+	height: 100%;
 	width: 100%;
+	z-index: 10;
+}
+
+#bottomBar {
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    width: 100%;
+    background-color: #809ec4;
+    color: #FFF;
+    z-index: 100;
+}
+
+#infoBox {
+    height: 20px;
+}
+
+#coordinatesBox {
+    height: 20px;
+}
+
+#layersBox {
+    position: fixed; 
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 200px;
+    background-color: rgba(0,60,136,.5);
+    color: #FFF;
+    z-index: 1000;
+    padding-left: 5px;
+    overflow: auto;
+    bottom: 40px;
+}
+
+.layers-control {
+  top: 65px;
+  left: .5em;
+}
+.ol-touch .layers-control {
+  top: 80px;
+}
+
+#layers-button {
+	background-image: url(/img/icon/layers.png);
+	background-repeat: no-repeat;
+	background-size: 80% 80%;
+	background-position: center;
 }

@@ -37,7 +37,8 @@ var map = new ol.Map({
 });
 
 var layersBox = document.getElementById('layersBox');
-var statusBar = document.getElementById('statusBar');
+var infoBox = document.getElementById('infoBox');
+var coordinatesBox = document.getElementById('coordinatesBox');
 
 $.each($data.layers, function(index, layerData) {
 	var layer = createLayer(layerData);
@@ -49,38 +50,66 @@ $.each($data.layers, function(index, layerData) {
 	var label = createCheckBoxLabel(layerData);
 	layersBox.appendChild(label);
 	
+	layersBox.appendChild(document.createElement('br'));
+	
 	$(checkbox).change(function() {
 		layer.setVisible($(this).is(":checked"));        
     });
 })
 
 
-var selectInteraction = new ol.interaction.DragBox(
-                    {
-                        condition: ol.events.condition.shiftKeyOnly,
-                        style: new ol.style.Style({
-                            stroke: new ol.style.Stroke({
-                                color: [0, 0, 255, 1]
-                            })
-                        })
-                    }
-            );
-            
+var selectInteraction = new ol.interaction.DragBox({
+	condition: ol.events.condition.shiftKeyOnly,
+	style: new ol.style.Style({
+		stroke: new ol.style.Stroke({
+			color: [0, 0, 255, 1]
+		})
+	})
+});           
 map.addInteraction(selectInteraction);
-
 selectInteraction.on('boxend', function (evt) {
-	statusBar.innerHTML = selectInteraction.getGeometry().getCoordinates();
+	infoBox.innerHTML = selectInteraction.getGeometry().getCoordinates();
 });
 
 
 var mousePositionControl = new ol.control.MousePosition({
-        coordinateFormat: ol.coordinate.createStringXY(4),
-        projection: 'EPSG:4326',
-        // comment the following two lines to have the mouse position
-        // be placed within the map.
-        className: 'custom-mouse-position',
-        target: document.getElementById('mousePosition'),
-        undefinedHTML: '&nbsp;'
-      });
-
+	coordinateFormat: ol.coordinate.createStringXY(4),
+	projection: 'EPSG:4326',
+	className: 'custom-mouse-position',
+	target: coordinatesBox,
+	undefinedHTML: '&nbsp;'
+});
 map.addControl(mousePositionControl);
+
+
+/**
+ * @constructor
+ * @extends {ol.control.Control}
+ * @param {Object=} opt_options Control options.
+ */
+LayersControl = function(options) {
+
+	var options = options || {};
+
+	var button = document.createElement('button');
+	button.id = 'layers-button';
+
+	$(button).click(function(){
+		$("#layersBox").toggle();
+	});
+
+	var element = document.createElement('div');
+	element.className = 'layers-control ol-unselectable ol-control';
+	element.appendChild(button);
+
+	ol.control.Control.call(this, {
+		element: element,
+		target: options.target
+	});
+
+};
+ol.inherits(LayersControl, ol.control.Control);
+
+
+
+map.addControl(new LayersControl());
