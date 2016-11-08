@@ -16,7 +16,7 @@ Para instalar las dependencias necesarias y crear la base de datos ejecutar:
 - [X] Activar/Desactivar capas
 - [ ] Mostrar la leyenda de las capas (Clases de la simbología), y escala de visualización.
 - [X] Consulta gráfica (punto y rectangulo) para cada capa
-- [ ] Medición de distancias
+- [X] Medición de distancias
 - [ ] Ingresar nuevos elementos en una capa vectorial creada por el usuario, o de las mencionadas anteriormente (geometría y atributos)
 - [ ] Simbología
 - [ ] Mejorar interfaz
