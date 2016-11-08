@@ -43,16 +43,17 @@ html, body {
     bottom: 40px;
 }
 
-.layers-control {
-  top: 65px;
-  left: .5em;
-}
-
 .ol-touch {
   top: 80px;
 }
 
-#layers-button {
+.custom-control-button {
+	background-repeat: no-repeat;
+	background-size: 80% 80%;
+	background-position: center;
+}
+
+#measure-button {
 	background-image: url(/img/icon/layers.png);
 	background-repeat: no-repeat;
 	background-size: 80% 80%;

@@ -3,7 +3,8 @@ var $gis2016 = {
 	dom: {},
 	fn: {},
 	interactions: {},
-	controls: {}
+	controls: {},
+	tools: {},
 };
 
 //wms url
