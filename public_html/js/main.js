@@ -1,4 +1,16 @@
-var createLayer = function(layerData) {
+/***********************************************************************
+ * DOM ELEMENTS
+ **********************************************************************/
+$gis2016.dom.mapBox = document.getElementById('map');
+$gis2016.dom.layersBox = document.getElementById('layersBox');
+$gis2016.dom.infoBox = document.getElementById('infoBox');
+$gis2016.dom.coordinatesBox = document.getElementById('coordinatesBox');
+
+
+/***********************************************************************
+ * FUNCTIONS
+ **********************************************************************/
+$gis2016.fn.createLayer = function(layerData) {
 	return new ol.layer.Tile({
 		title: layerData.title,
 		visible: layerData.visibility,
@@ -11,7 +23,7 @@ var createLayer = function(layerData) {
     });
 }
 
-var createLayerCheckBox = function(layerData) {
+$gis2016.fn.createLayerCheckBox = function(layerData) {
 	var checkbox = document.createElement('input');
 	checkbox.type = "checkbox";
 	checkbox.id = layerData.name;
@@ -19,97 +31,119 @@ var createLayerCheckBox = function(layerData) {
 	return checkbox;
 }
 
-var createCheckBoxLabel = function(layerData) {
+$gis2016.fn.createCheckBoxLabel = function(layerData) {
 	var label = document.createElement('label');
 	label.htmlFor = layerData.name;
 	label.appendChild(document.createTextNode(layerData.title));
 	return label;
 }
 
-var map = new ol.Map({
-	target: 'map',
-	layers: [],
-	view: new ol.View({
-		projection: 'EPSG:4326',
-		center: [-59, -27.5],
-		zoom: 4
-	})
-});
+$gis2016.fn.loadLayer = function(layerData) {
+	var layer = $gis2016.fn.createLayer(layerData);
+	$gis2016.map.addLayer(layer);
 
-var layersBox = document.getElementById('layersBox');
-var infoBox = document.getElementById('infoBox');
-var coordinatesBox = document.getElementById('coordinatesBox');
+	var checkbox = $gis2016.fn.createLayerCheckBox(layerData);
+	$gis2016.dom.layersBox.appendChild(checkbox);
 
-$.each($data.layers, function(index, layerData) {
-	var layer = createLayer(layerData);
-	map.addLayer(layer);
-
-	var checkbox = createLayerCheckBox(layerData);
-	layersBox.appendChild(checkbox);
-
-	var label = createCheckBoxLabel(layerData);
-	layersBox.appendChild(label);
+	var label = $gis2016.fn.createCheckBoxLabel(layerData);
+	$gis2016.dom.layersBox.appendChild(label);
 	
-	layersBox.appendChild(document.createElement('br'));
+	$gis2016.dom.layersBox.appendChild(document.createElement('br'));
 	
 	$(checkbox).change(function() {
 		layer.setVisible($(this).is(":checked"));        
     });
-})
+}
 
 
-var selectInteraction = new ol.interaction.DragBox({
+/***********************************************************************
+ * INTERACTIONS
+ **********************************************************************/
+$gis2016.interactions.dragBox = new ol.interaction.DragBox({
 	condition: ol.events.condition.shiftKeyOnly,
 	style: new ol.style.Style({
 		stroke: new ol.style.Stroke({
 			color: [0, 0, 255, 1]
 		})
 	})
-});           
-map.addInteraction(selectInteraction);
-selectInteraction.on('boxend', function (evt) {
-	infoBox.innerHTML = selectInteraction.getGeometry().getCoordinates();
 });
 
 
-var mousePositionControl = new ol.control.MousePosition({
+/***********************************************************************
+ * CONTROLS
+ **********************************************************************/
+$gis2016.controls.mousePosition = new ol.control.MousePosition({
 	coordinateFormat: ol.coordinate.createStringXY(4),
-	projection: 'EPSG:4326',
-	className: 'custom-mouse-position',
-	target: coordinatesBox,
+	projection: $gis2016.config.map.projection,
+	className: 'no-class',
+	target: $gis2016.dom.coordinatesBox,
 	undefinedHTML: '&nbsp;'
 });
-map.addControl(mousePositionControl);
+
+$gis2016.controls.layersControl = (function() {
+
+	/**
+	 * @constructor
+	 * @extends {ol.control.Control}
+	 * @param {Object=} options Control options.
+	 */
+	var LayersControl = function(options) {
+
+		var options = options || {};
+
+		var button = document.createElement('button');
+		button.id = 'layers-button';
+
+		$(button).click(function(){
+			$($gis2016.dom.layersBox).toggle();
+		});
+
+		var element = document.createElement('div');
+		element.className = 'layers-control ol-unselectable ol-control';
+		element.appendChild(button);
+
+		ol.control.Control.call(this, {
+			element: element,
+			target: options.target
+		});
+
+	};
+
+	ol.inherits(LayersControl, ol.control.Control);
+
+	return new LayersControl();
+})();
 
 
-/**
- * @constructor
- * @extends {ol.control.Control}
- * @param {Object=} opt_options Control options.
- */
-LayersControl = function(options) {
+/***********************************************************************
+ * MAP
+ **********************************************************************/
 
-	var options = options || {};
+//create map
+$gis2016.map = new ol.Map({
+	target: $gis2016.dom.mapBox.id,
+	layers: [],
+	view: new ol.View({
+		projection: $gis2016.config.map.projection,
+		center: $gis2016.config.map.center,
+		zoom: $gis2016.config.map.zoom
+	})
+});
 
-	var button = document.createElement('button');
-	button.id = 'layers-button';
+//add layers
+$.each($gis2016.config.layers, function(index, layerData) {
+	$gis2016.fn.loadLayer(layerData);
+})
 
-	$(button).click(function(){
-		$("#layersBox").toggle();
-	});
+//add dragBox interaction          
+$gis2016.map.addInteraction($gis2016.interactions.dragBox);
+$gis2016.interactions.dragBox.on('boxend', function(e) {
+	$gis2016.dom.infoBox.innerHTML = $gis2016.interactions
+		.dragBox.getGeometry().getCoordinates();
+});
 
-	var element = document.createElement('div');
-	element.className = 'layers-control ol-unselectable ol-control';
-	element.appendChild(button);
+//add mouse control
+$gis2016.map.addControl($gis2016.controls.mousePosition);
 
-	ol.control.Control.call(this, {
-		element: element,
-		target: options.target
-	});
-
-};
-ol.inherits(LayersControl, ol.control.Control);
-
-
-
-map.addControl(new LayersControl());
+//add layers control
+$gis2016.map.addControl($gis2016.controls.layersControl);

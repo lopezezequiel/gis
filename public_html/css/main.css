@@ -10,29 +10,28 @@ html, body {
 	z-index: 10;
 }
 
-#bottomBar {
-    position: fixed; 
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 40px;
+#infoBox {
+    position: fixed;
+    bottom: 20px;
+    height: 20px;
     width: 100%;
     background-color: #809ec4;
     color: #FFF;
     z-index: 100;
 }
 
-#infoBox {
-    height: 20px;
-}
-
 #coordinatesBox {
+    position: fixed;
+    bottom: 0;
     height: 20px;
+    width: 100%;
+    background-color: #809ec4;
+    color: #FFF;
+    z-index: 100;
 }
 
 #layersBox {
-    position: fixed; 
-    bottom: 0;
+    position: fixed;
     right: 0;
     height: 100%;
     width: 200px;
@@ -48,7 +47,8 @@ html, body {
   top: 65px;
   left: .5em;
 }
-.ol-touch .layers-control {
+
+.ol-touch {
   top: 80px;
 }
 

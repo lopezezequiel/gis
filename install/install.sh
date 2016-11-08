@@ -18,7 +18,7 @@ function absPath {
 ###############################################################################
 ROOT="`dirname \"$0\"`"
 ROOT=$(absPath $ROOT/..)
-WMS_URL="http://localhost/cgi-bin/qgis_mapserv.fcgi?MAP=$ROOT/gis2016.qgs"
+WMS_URL="/cgi-bin/qgis_mapserv.fcgi?MAP=$ROOT/gis2016.qgs"
 PG_DB=gisdb2016
 VIRTUALHOST_DOMAIN=gis2016.com
 VIRTUALHOST_ROOT=$(absPath $ROOT/public_html)
@@ -105,7 +105,7 @@ echo "Removiendo archivos temporales..."
 sudo rm "$ROOT/install/pgdump/gisdb2016.dump" > /dev/null
 
 echo "Creando wmsURL.js"
-echo "var \$wmsURL = '$WMS_URL';" > "$ROOT/public_html/js/wmsURL.js"
+echo "\$wmsURL = '$WMS_URL';" > "$ROOT/public_html/js/wmsURL.js"
 
 echo "Abriendo browser..."
 nohup sensible-browser "http://127.0.0.1" > /dev/null &
