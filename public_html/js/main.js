@@ -491,6 +491,7 @@ $gis2016.controls.measure = $gis2016.fn.createMultiButtonControl(
 	function(){
 		$gis2016.tools.measurePolygon.deactivate();
 		$gis2016.tools.measureLineString.deactivate();
+		$gis2016.tools.draw.deactivate();
 
 		return 'control-button ruler-icon';
 	},
