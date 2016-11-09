@@ -71,7 +71,26 @@ $gis2016.fn.loadLayer = function(layerData) {
     });
 }
 
-$gis2016.fn.createSimpleButtonControl = function(fn, imageURL, xy) {
+$gis2016.fn.getRoulette = function(array) {
+	
+	return new (function() {
+		var index = 0;
+		this.next = function() {
+			if(array.length > 0) {
+				var value = array[index];
+				index++;
+				if(index == array.length) {
+					index = 0;
+				}
+				
+				return value;
+			}
+		};
+	})();
+};
+
+$gis2016.fn.createMultiButtonBarControl = function(controlClassName) {
+	var args = Array.prototype.slice.call(arguments, 1);
 
 	/**
 	 * @constructor
@@ -82,19 +101,18 @@ $gis2016.fn.createSimpleButtonControl = function(fn, imageURL, xy) {
 
 		var options = options || {};
 
-		var button = document.createElement('button');
-		button.className = 'custom-control-button';
-		button.style.backgroundImage = 'url(\'' + imageURL + '\')';
-
-		$(button).click(function(){
-			fn.call(fn);
-		});
-
 		var element = document.createElement('div');
-		element.style.top = xy[0];
-		element.style.left = xy[1];
-		element.className = 'ol-unselectable ol-control';
-		element.appendChild(button);
+		element.className = controlClassName + ' ol-unselectable ol-control';
+
+
+		for(var i=0; i<args.length; i++) {
+			var button = document.createElement('button');
+			var arg = args[i];
+
+			button.className = arg.className;
+			$(button).click(arg.fn);
+			element.appendChild(button);
+		}
 
 		ol.control.Control.call(this, {
 			element: element,
@@ -107,6 +125,42 @@ $gis2016.fn.createSimpleButtonControl = function(fn, imageURL, xy) {
 	return new CustomControl();
 }
 
+
+$gis2016.fn.createMultiButtonControl = function(controlClassName) {
+	var fns = Array.prototype.slice.call(arguments, 1);
+	var roulette = $gis2016.fn.getRoulette(fns);
+
+	/**
+	 * @constructor
+	 * @extends {ol.control.Control}
+	 * @param {Object=} options Control options.
+	 */
+	var CustomControl = function(options) {
+
+		var options = options || {};
+
+		var button = document.createElement('button');
+
+		var element = document.createElement('div');
+		element.className = controlClassName + ' ol-unselectable ol-control';
+		element.appendChild(button);
+
+		ol.control.Control.call(this, {
+			element: element,
+			target: options.target
+		});
+		
+		
+		$(button).click(function(){
+			var fn = roulette.next();
+			button.className = fn.call(fn);
+		});
+		$(button).click();
+	};
+
+	ol.inherits(CustomControl, ol.control.Control);
+	return new CustomControl();
+}
 
 $gis2016.fn.createVectorLayer = function(source) {
 	return new ol.layer.Vector({
@@ -179,6 +233,87 @@ $gis2016.interactions.dragBox = new ol.interaction.DragBox({
 /***********************************************************************
  * TOOLS
  **********************************************************************/
+$gis2016.tools.draw = new (function(map){
+
+	//PRIVATE
+	var active = false;
+	var tool = this;
+	var interaction;
+	var layer;
+	var sketch;
+	var mode;
+	var source;
+
+	//PUBLIC
+	this.deactivate = function() {
+		if(active) {
+			map.removeInteraction(interaction);
+			map.removeLayer(layer);
+			active = false;
+			mode = undefined;
+		}
+	};
+
+	this.clean = function() {
+		if(active) {
+			var m = mode;
+			tool.deactivate();
+			tool.activate(m);
+		}
+	}
+
+	this.activate = function(m) {
+		if(!active) {
+			source = new ol.source.Vector();
+			layer = $gis2016.fn.createVectorLayer(source);
+			map.addLayer(layer);
+			
+			
+			mode = m;
+			interaction = new ol.interaction.Draw({
+				source: source,
+				type: mode
+			});
+		
+			map.addInteraction(interaction);
+
+			active = true;
+		}
+	}
+
+	this.setMode = function(m) {
+		if(!active) {
+			tool.activate();
+		}
+		
+		mode = m;
+		map.removeInteraction(interaction);
+		interaction = new ol.interaction.Draw({
+			source: source,
+			type: mode
+		});
+		map.addInteraction(interaction);
+	}
+	
+	this.toggle = function() {
+		if(active) {
+			tool.deactivate();
+		} else {
+			tool.activate();
+		}
+	}
+	
+	this.isActivated = function() {
+		return active;
+	}
+	
+	this.getMode = function() {
+		return mode;
+	}
+
+})($gis2016.map);
+
+
 $gis2016.tools.measurePolygon = new (function(map){
 	
 	//PRIVATE
@@ -343,32 +478,72 @@ $gis2016.controls.mousePosition = new ol.control.MousePosition({
 	undefinedHTML: '&nbsp;'
 });
 
-$gis2016.controls.layersControl = 
-	$gis2016.fn.createSimpleButtonControl(function(){
+$gis2016.controls.layersControl = $gis2016.fn.createMultiButtonControl(
+	'layers-box-control',
+	function(){
 		$($gis2016.dom.layersBox).toggle();
-	}, '/img/icon/layers.png', ['65px', '.5em']);
-	
-$gis2016.controls.measurePolygon = 
-	$gis2016.fn.createSimpleButtonControl(function(){
-		var tool = $gis2016.tools.measurePolygon;
-		if(tool.isActivated()) {
-			tool.deactivate();
-		} else {
-			$gis2016.tools.measureLineString.deactivate();
-			tool.activate();
-		}
-	}, '/img/icon/polygon.png', ['96px', '.5em']);
-	
-$gis2016.controls.measureLineString = 
-	$gis2016.fn.createSimpleButtonControl(function(){
-		var tool = $gis2016.tools.measureLineString;
-		if(tool.isActivated()) {
-			tool.deactivate();
-		} else {
+		return 'control-button layers-icon';
+	}
+);
+
+$gis2016.controls.measure = $gis2016.fn.createMultiButtonControl(
+	'measure-tool-control',
+	function(){
+		$gis2016.tools.measurePolygon.deactivate();
+		$gis2016.tools.measureLineString.deactivate();
+
+		return 'control-button ruler-icon';
+	},
+	function(){
+		$gis2016.tools.measureLineString.deactivate();
+		$gis2016.tools.draw.deactivate();
+		$gis2016.tools.measurePolygon.activate();
+		
+		return 'control-button polygon-icon';
+	},
+	function(){
+		$gis2016.tools.measurePolygon.deactivate();
+		$gis2016.tools.draw.deactivate();
+		$gis2016.tools.measureLineString.activate();
+
+		return 'control-button linestring-icon';
+	}
+);
+
+$gis2016.controls.draw = $gis2016.fn.createMultiButtonBarControl(
+	'draw-tool-control', {
+		fn: function(){
+			$('.draw-tool-button').toggle();
+		},
+		className: 'control-button pencil-icon'
+	}, {
+		fn: function(){
 			$gis2016.tools.measurePolygon.deactivate();
-			tool.activate();
-		}
-	}, '/img/icon/linestring.png', ['127px', '.5em']);
+			$gis2016.tools.measureLineString.deactivate();
+			$gis2016.tools.draw.setMode('LineString');
+		},
+		className: 'control-button draw-tool-button linestring-icon'
+	}, {
+		fn: function(){
+			$gis2016.tools.measurePolygon.deactivate();
+			$gis2016.tools.measureLineString.deactivate();
+			$gis2016.tools.draw.setMode('Polygon');
+		}, 
+		className: 'control-button draw-tool-button polygon-icon'
+	}, {
+		fn: function(){
+			$gis2016.tools.measurePolygon.deactivate();
+			$gis2016.tools.measureLineString.deactivate();
+			$gis2016.tools.draw.setMode('Point');
+		},
+		className: 'control-button draw-tool-button point-icon'
+	}, {
+		fn: function(){
+			$gis2016.tools.draw.clean();
+		},
+		className: 'control-button draw-tool-button broom-icon'
+	}
+);
 
 
 /***********************************************************************
@@ -393,11 +568,11 @@ $gis2016.map.addControl($gis2016.controls.mousePosition);
 //add layers control
 $gis2016.map.addControl($gis2016.controls.layersControl);
 
-//add measurePolygon  control
-$gis2016.map.addControl($gis2016.controls.measurePolygon);
+//add measure  control
+$gis2016.map.addControl($gis2016.controls.measure);
 
-//add measureLineString  control
-$gis2016.map.addControl($gis2016.controls.measureLineString);
+//add draw  control
+$gis2016.map.addControl($gis2016.controls.draw);
 
 //add scaleline control
 $gis2016.map.addControl(new ol.control.ScaleLine());

@@ -53,6 +53,7 @@ html, body {
     padding-left: 5px;
     overflow: auto;
     bottom: 40px;
+    display: none;
 }
 
 .ol-touch {
@@ -65,9 +66,59 @@ html, body {
 	background-position: center;
 }
 
-#measure-button {
-	background-image: url(/img/icon/layers.png);
+.layers-box-control {
+	top: 65px;
+	left: .5em;
+}
+
+.measure-tool-control {
+	top: 96px;
+	left: .5em;
+}
+
+.draw-tool-control {
+	top: 127px;
+	left: .5em;
+    width: auto;
+}
+
+.control-button, .control-button, .control-button {
 	background-repeat: no-repeat;
 	background-size: 80% 80%;
 	background-position: center;
+}
+
+.draw-tool-button {
+}
+
+.ruler-icon {
+	background-image: url(/img/icon/ruler.png);
+}
+
+.polygon-icon {
+	background-image: url(/img/icon/polygon.png);
+}
+
+.linestring-icon {
+	background-image: url(/img/icon/linestring.png);
+}
+
+.layers-icon {
+	background-image: url(/img/icon/layers.png);
+}
+
+.broom-icon {
+	background-image: url(/img/icon/dot-and-circle.png);
+}
+
+.point-icon {
+	background-image: url(/img/icon/dot-and-circle.png);
+}
+
+.broom-icon {
+	background-image: url(/img/icon/broom.png);
+}
+
+.pencil-icon {
+	background-image: url(/img/icon/pencil.png);
 }
