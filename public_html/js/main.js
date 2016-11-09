@@ -158,6 +158,11 @@ $gis2016.fn.formatLength = function(length) {
 };
 
 
+$gis2016.fn.formatCoordinates = function(coordinates) {
+	return $gis2016.config.map.projection + ' ' + 
+		ol.coordinate.createStringXY(3)(coordinates);
+}
+
 /***********************************************************************
  * INTERACTIONS
  **********************************************************************/
@@ -194,7 +199,7 @@ $gis2016.tools.measurePolygon = new (function(map){
 			partialArea = sketch.getGeometry().getArea();
 			$gis2016.dom.infoBox.innerHTML =  
 				'Area Total: ' + $gis2016.fn.formatArea(totalArea) +
-				'; Area parcial: ' + $gis2016.fn.formatArea(partialArea);
+				' - Area parcial: ' + $gis2016.fn.formatArea(partialArea);
 		}
 	};
 
@@ -271,7 +276,7 @@ $gis2016.tools.measureLineString = new (function(map){
 			partialLength = sketch.getGeometry().getLength();
 			$gis2016.dom.infoBox.innerHTML =  
 				'Longitud Total: ' + $gis2016.fn.formatLength(totalLength) +
-				'; Longitud parcial: ' + $gis2016.fn.formatLength(partialLength);
+				' - Longitud parcial: ' + $gis2016.fn.formatLength(partialLength);
 		}
 	};
 
@@ -331,7 +336,7 @@ $gis2016.tools.measureLineString = new (function(map){
  * CONTROLS
  **********************************************************************/
 $gis2016.controls.mousePosition = new ol.control.MousePosition({
-	coordinateFormat: ol.coordinate.createStringXY(4),
+	coordinateFormat: $gis2016.fn.formatCoordinates,
 	projection: $gis2016.config.map.projection,
 	className: 'no-class',
 	target: $gis2016.dom.coordinatesBox,
@@ -393,3 +398,6 @@ $gis2016.map.addControl($gis2016.controls.measurePolygon);
 
 //add measureLineString  control
 $gis2016.map.addControl($gis2016.controls.measureLineString);
+
+//add scaleline control
+$gis2016.map.addControl(new ol.control.ScaleLine());

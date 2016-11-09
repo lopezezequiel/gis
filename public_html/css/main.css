@@ -15,7 +15,7 @@ html, body {
     bottom: 20px;
     height: 20px;
     width: 100%;
-    background-color: #809ec4;
+    background-color: rgba(0,60,136,.5);
     color: #FFF;
     z-index: 100;
 }
@@ -25,9 +25,21 @@ html, body {
     bottom: 0;
     height: 20px;
     width: 100%;
-    background-color: #809ec4;
+    background-color: rgba(0,60,136,.5);
     color: #FFF;
     z-index: 100;
+}
+
+.ol-scale-line {
+	z-index: 200;
+	bottom: 2px;
+	left: 200px;
+	background: none;
+}
+
+
+.ol-logo-only {
+	display: none;
 }
 
 #layersBox {
