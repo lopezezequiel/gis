@@ -576,3 +576,5 @@ $gis2016.map.addControl($gis2016.controls.draw);
 
 //add scaleline control
 $gis2016.map.addControl(new ol.control.ScaleLine());
+
+$('.draw-tool-button').hide();

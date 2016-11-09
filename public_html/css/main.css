@@ -77,8 +77,8 @@ html, body {
 }
 
 .draw-tool-control {
-	top: 127px;
-	left: .5em;
+	top: 8px;
+	left: 40px;
     width: auto;
 }
 

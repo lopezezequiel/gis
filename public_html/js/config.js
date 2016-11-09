@@ -39,7 +39,7 @@ $gis2016.config.layers = [
 	{url: $gis2016.config.wmsURL, name: "obra_de_comunicación", title: "Obras de Comunicación", visibility: false},
 	{url: $gis2016.config.wmsURL, name: "obra_portuaria", title: "Obras Portuarias", visibility: false},
 	{url: $gis2016.config.wmsURL, name: "otras_edificaciones", title: "Otras Edificaciones", visibility: false},
-	{url: $gis2016.config.wmsURL, name: "pais_lim", title: "???Países Limítrofes", visibility: false},
+	{url: $gis2016.config.wmsURL, name: "pais_lim", title: "???pais_lim", visibility: false},
 	{url: $gis2016.config.wmsURL, name: "provincias", title: "Provincias", visibility: false},
 	{url: $gis2016.config.wmsURL, name: "puente_red_vial_puntos", title: "Puentes Red Víal", visibility: false},
 	{url: $gis2016.config.wmsURL, name: "puntos_de_alturas_topograficas", title: "Altura Topográfica", visibility: false},
