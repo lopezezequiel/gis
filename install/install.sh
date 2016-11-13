@@ -18,7 +18,7 @@ function absPath {
 ###############################################################################
 ROOT="`dirname \"$0\"`"
 ROOT=$(absPath $ROOT/..)
-WMS_URL="/cgi-bin/qgis_mapserv.fcgi?MAP=$ROOT/gis2016.qgs"
+WMS_URL="/cgi-bin/qgis_mapserv.fcgi?MAP=$ROOT/qgis/gis2016.qgs"
 PG_DB=gisdb2016
 VIRTUALHOST_DOMAIN=gis2016.com
 VIRTUALHOST_ROOT=$(absPath $ROOT/public_html)
