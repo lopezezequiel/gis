@@ -23,7 +23,7 @@ Para instalar las dependencias necesarias y crear la base de datos ejecutar:
 - [X] Simbología Red Víal
 - [X] Simbología Vegetación Cultivos
 - [X] Simbología Vegetación Arborea
-- [ ] Simbología Vegetación Hidrófila
+- [X] Simbología Vegetación Hidrófila
 - [X] Ordenar Capas en Qgis
 - [ ] Ordenar Capas en cliente web
 
