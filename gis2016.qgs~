@@ -1,7 +1,7 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
 <qgis projectname="" version="2.4.0-Chugiak">
     <title></title>
-    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="">
         <customproperties/>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="actividades_agropecuarias20161106072023765" name="actividades_agropecuarias">
             <customproperties/>
@@ -135,7 +135,7 @@
         <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="veg_arbustiva20161106072031358" name="veg_arbustiva">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Checked" id="veg_cultivos20161106072031379" name="veg_cultivos">
+        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="veg_cultivos20161106072031379" name="veg_cultivos">
             <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="veg_hidrofila20161106072031400" name="veg_hidrofila">
@@ -149,10 +149,10 @@
     <mapcanvas>
         <units>degrees</units>
         <extent>
-            <xmin>-62.42781259993957121</xmin>
-            <ymin>-27.37856935488926879</ymin>
-            <xmax>-62.19355673145987851</xmax>
-            <ymax>-27.18076115174705265</ymax>
+            <xmin>-64.60171236734441891</xmin>
+            <ymin>-29.7452348086297178</ymin>
+            <xmax>-60.85361847166746685</xmax>
+            <ymax>-26.58030355835263947</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -441,9 +441,9 @@
                 <legendlayerfile isInOverview="0" layerid="veg_arbustiva20161106072031358" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="veg_cultivos" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="veg_cultivos20161106072031379" visible="1"/>
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="veg_cultivos" showFeatureCount="0">
+            <filegroup open="false" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="veg_cultivos20161106072031379" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="veg_hidrofila" showFeatureCount="0">
@@ -9268,7 +9268,7 @@
                             <prop k="svgOutlineWidth" v="0.3"/>
                             <prop k="svg_outline_width_map_unit_scale" v="0,0"/>
                             <prop k="svg_outline_width_unit" v="MM"/>
-                            <prop k="width" v="20"/>
+                            <prop k="width" v="18"/>
                             <symbol alpha="1" type="line" name="@0@0">
                                 <layer pass="0" class="SimpleLine" locked="0">
                                     <prop k="capstyle" v="square"/>
@@ -9303,7 +9303,7 @@
                             <prop k="svgOutlineWidth" v="0.3"/>
                             <prop k="svg_outline_width_map_unit_scale" v="0,0"/>
                             <prop k="svg_outline_width_unit" v="MM"/>
-                            <prop k="width" v="20"/>
+                            <prop k="width" v="4.8"/>
                             <symbol alpha="1" type="line" name="@1@0">
                                 <layer pass="0" class="SimpleLine" locked="0">
                                     <prop k="capstyle" v="square"/>
@@ -9338,7 +9338,7 @@
                             <prop k="svgOutlineWidth" v="0.3"/>
                             <prop k="svg_outline_width_map_unit_scale" v="0,0"/>
                             <prop k="svg_outline_width_unit" v="MM"/>
-                            <prop k="width" v="20"/>
+                            <prop k="width" v="18"/>
                             <symbol alpha="1" type="line" name="@2@0">
                                 <layer pass="0" class="SimpleLine" locked="0">
                                     <prop k="capstyle" v="square"/>
