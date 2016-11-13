@@ -1,7 +1,7 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
 <qgis projectname="" version="2.4.0-Chugiak">
     <title></title>
-    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="">
         <customproperties/>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="actividades_agropecuarias20161106072023765" name="actividades_agropecuarias">
             <customproperties/>
@@ -93,6 +93,12 @@
         <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="red_vial20161106072024636" name="red_vial">
             <customproperties/>
         </layer-tree-layer>
+        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="vias_secundarias20161106072031441" name="vias_secundarias">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="red_ferroviaria20161106072024614" name="red_ferroviaria">
+            <customproperties/>
+        </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="ejido20161106072024216" name="ejido">
             <customproperties/>
         </layer-tree-layer>
@@ -108,12 +114,6 @@
         <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="provincias20161106072024535" name="provincias">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="red_ferroviaria20161106072024614" name="red_ferroviaria">
-            <customproperties/>
-        </layer-tree-layer>
-        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="vias_secundarias20161106072031441" name="vias_secundarias">
-            <customproperties/>
-        </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="sue_congelado20161106072031227" name="sue_congelado">
             <customproperties/>
         </layer-tree-layer>
@@ -126,10 +126,10 @@
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="sue_hidromorfologico20161106072031296" name="sue_hidromorfologico">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Checked" id="sue_no_consolidado20161106072031317" name="sue_no_consolidado">
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="sue_no_consolidado20161106072031317" name="sue_no_consolidado">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Checked" id="veg_arborea20161106072031338" name="veg_arborea">
+        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="veg_arborea20161106072031338" name="veg_arborea">
             <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="veg_arbustiva20161106072031358" name="veg_arbustiva">
@@ -138,7 +138,7 @@
         <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="veg_cultivos20161106072031379" name="veg_cultivos">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="veg_hidrofila20161106072031400" name="veg_hidrofila">
+        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="veg_hidrofila20161106072031400" name="veg_hidrofila">
             <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="veg_suelo_desnudo20161106072031421" name="veg_suelo_desnudo">
@@ -149,10 +149,10 @@
     <mapcanvas>
         <units>degrees</units>
         <extent>
-            <xmin>-13922.79886509857169585</xmin>
-            <ymin>-8464.0545120245351427</ymin>
-            <xmax>16781.5863327581610065</xmax>
-            <ymax>17463.06229402065218892</ymax>
+            <xmin>-64.47684750358982342</xmin>
+            <ymin>-26.32828607977703683</ymin>
+            <xmax>-59.28900009039917762</xmax>
+            <ymax>-21.94761130036076935</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -371,6 +371,16 @@
                 <legendlayerfile isInOverview="0" layerid="red_vial20161106072024636" visible="0"/>
             </filegroup>
         </legendlayer>
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="vias_secundarias" showFeatureCount="0">
+            <filegroup open="false" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="vias_secundarias20161106072031441" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="red_ferroviaria" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="red_ferroviaria20161106072024614" visible="0"/>
+            </filegroup>
+        </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="ejido" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="ejido20161106072024216" visible="0"/>
@@ -396,16 +406,6 @@
                 <legendlayerfile isInOverview="0" layerid="provincias20161106072024535" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="red_ferroviaria" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="red_ferroviaria20161106072024614" visible="0"/>
-            </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="vias_secundarias" showFeatureCount="0">
-            <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="vias_secundarias20161106072031441" visible="0"/>
-            </filegroup>
-        </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="sue_congelado" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="sue_congelado20161106072031227" visible="0"/>
@@ -426,14 +426,14 @@
                 <legendlayerfile isInOverview="0" layerid="sue_hidromorfologico20161106072031296" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="sue_no_consolidado" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="sue_no_consolidado" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="sue_no_consolidado20161106072031317" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="sue_no_consolidado20161106072031317" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="veg_arborea" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="veg_arborea20161106072031338" visible="1"/>
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="veg_arborea" showFeatureCount="0">
+            <filegroup open="false" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="veg_arborea20161106072031338" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="veg_arbustiva" showFeatureCount="0">
@@ -446,8 +446,8 @@
                 <legendlayerfile isInOverview="0" layerid="veg_cultivos20161106072031379" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="veg_hidrofila" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="veg_hidrofila" showFeatureCount="0">
+            <filegroup open="false" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="veg_hidrofila20161106072031400" visible="0"/>
             </filegroup>
         </legendlayer>
@@ -8601,15 +8601,16 @@
                 </spatialrefsys>
             </srs>
             <provider encoding="System">postgres</provider>
-            <previewExpression></previewExpression>
+            <previewExpression>COALESCE( "gid", '&lt;NULL>' )</previewExpression>
             <vectorjoins/>
             <renderer-v2 symbollevels="0" type="RuleRenderer">
                 <rules>
                     <rule scalemaxdenom="100000" filter=" &quot;tipo&quot;  =  'Bosque Artificial' " symbol="0" label="IGN104 Bosque Artificial"/>
                     <rule scalemaxdenom="100000" filter=" &quot;tipo&quot;  =  'Bosque, Selva, Foresta o Parque Natural Bajo' " symbol="1" label="IGN100 Bosque, Selva, Foresta o Parque"/>
-                    <rule filter=" &quot;tipo&quot;  =  'Bosque, Selva, Foresta o Parque Natural Bajo' " symbol="2" scalemindenom="100000"/>
-                    <rule scalemaxdenom="500000" filter=" &quot;tipo&quot;  =  'Palmar' " symbol="3" label="IGN98 Palmar"/>
-                    <rule scalemaxdenom="500000" filter=" &quot;tipo&quot;  =  'Coniferas' " symbol="4" label="IGN99 Coniferas"/>
+                    <rule scalemaxdenom="1000000" filter=" &quot;tipo&quot;  =  'Bosque, Selva, Foresta o Parque Natural Bajo' " symbol="2" scalemindenom="100000" label="IGN100 Bosque, Selva, Foresta o Parque Natural Bajo"/>
+                    <rule filter=" &quot;tipo&quot;  =  'Bosque, Selva, Foresta o Parque Natural Bajo' " symbol="3" scalemindenom="1000000" label="IGN100 Agregada - Bosque, Selva, Foresta o Parque Natural Bajo"/>
+                    <rule scalemaxdenom="500000" filter=" &quot;tipo&quot;  =  'Palmar' " symbol="4" label="IGN98 Palmar"/>
+                    <rule scalemaxdenom="500000" filter=" &quot;tipo&quot;  =  'Coniferas' " symbol="5" label="IGN99 Coniferas"/>
                 </rules>
                 <symbols>
                     <symbol alpha="1" type="fill" name="0">
@@ -8703,7 +8704,7 @@
                             <prop k="svgOutlineWidth" v="0.3"/>
                             <prop k="svg_outline_width_map_unit_scale" v="0,0"/>
                             <prop k="svg_outline_width_unit" v="MM"/>
-                            <prop k="width" v="20"/>
+                            <prop k="width" v="21"/>
                             <symbol alpha="0" type="line" name="@2@0">
                                 <layer pass="0" class="SimpleLine" locked="0">
                                     <prop k="capstyle" v="square"/>
@@ -8732,6 +8733,41 @@
                             <prop k="outline_width_unit" v="MM"/>
                             <prop k="pattern_width_map_unit_scale" v="0,0"/>
                             <prop k="pattern_width_unit" v="MM"/>
+                            <prop k="svgFile" v="ign100.svg"/>
+                            <prop k="svgFillColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineWidth" v="0.3"/>
+                            <prop k="svg_outline_width_map_unit_scale" v="0,0"/>
+                            <prop k="svg_outline_width_unit" v="MM"/>
+                            <prop k="width" v="10"/>
+                            <symbol alpha="0" type="line" name="@3@0">
+                                <layer pass="0" class="SimpleLine" locked="0">
+                                    <prop k="capstyle" v="square"/>
+                                    <prop k="color" v="0,0,0,255"/>
+                                    <prop k="customdash" v="5;2"/>
+                                    <prop k="customdash_map_unit_scale" v="0,0"/>
+                                    <prop k="customdash_unit" v="MM"/>
+                                    <prop k="draw_inside_polygon" v="0"/>
+                                    <prop k="joinstyle" v="bevel"/>
+                                    <prop k="offset" v="0"/>
+                                    <prop k="offset_map_unit_scale" v="0,0"/>
+                                    <prop k="offset_unit" v="MM"/>
+                                    <prop k="penstyle" v="solid"/>
+                                    <prop k="use_custom_dash" v="0"/>
+                                    <prop k="width" v="0"/>
+                                    <prop k="width_map_unit_scale" v="0,0"/>
+                                    <prop k="width_unit" v="MM"/>
+                                </layer>
+                            </symbol>
+                        </layer>
+                    </symbol>
+                    <symbol alpha="1" type="fill" name="4">
+                        <layer pass="0" class="SVGFill" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="outline_width_map_unit_scale" v="0,0"/>
+                            <prop k="outline_width_unit" v="MM"/>
+                            <prop k="pattern_width_map_unit_scale" v="0,0"/>
+                            <prop k="pattern_width_unit" v="MM"/>
                             <prop k="svgFile" v="ign98.svg"/>
                             <prop k="svgFillColor" v="0,0,0,255"/>
                             <prop k="svgOutlineColor" v="0,0,0,255"/>
@@ -8739,7 +8775,7 @@
                             <prop k="svg_outline_width_map_unit_scale" v="0,0"/>
                             <prop k="svg_outline_width_unit" v="MM"/>
                             <prop k="width" v="28"/>
-                            <symbol alpha="0" type="line" name="@3@0">
+                            <symbol alpha="0" type="line" name="@4@0">
                                 <layer pass="0" class="SimpleLine" locked="0">
                                     <prop k="capstyle" v="square"/>
                                     <prop k="color" v="0,0,0,255"/>
@@ -8760,7 +8796,7 @@
                             </symbol>
                         </layer>
                     </symbol>
-                    <symbol alpha="1" type="fill" name="4">
+                    <symbol alpha="1" type="fill" name="5">
                         <layer pass="0" class="SVGFill" locked="0">
                             <prop k="angle" v="0"/>
                             <prop k="outline_width_map_unit_scale" v="0,0"/>
@@ -8774,7 +8810,7 @@
                             <prop k="svg_outline_width_map_unit_scale" v="0,0"/>
                             <prop k="svg_outline_width_unit" v="MM"/>
                             <prop k="width" v="11"/>
-                            <symbol alpha="0" type="line" name="@4@0">
+                            <symbol alpha="0" type="line" name="@5@0">
                                 <layer pass="0" class="SimpleLine" locked="0">
                                     <prop k="capstyle" v="square"/>
                                     <prop k="color" v="0,0,0,255"/>
@@ -9642,28 +9678,227 @@
             <provider encoding="System">postgres</provider>
             <previewExpression></previewExpression>
             <vectorjoins/>
-            <renderer-v2 symbollevels="0" type="singleSymbol">
+            <renderer-v2 symbollevels="0" type="RuleRenderer">
+                <rules>
+                    <rule scalemaxdenom="100000" filter=" &quot;tipo&quot;  =  'Pajonal, Malezal, Cardal, Cortaderal, Españal, Jarillal, Quiscal, Juncal, Totoral' " symbol="0" label="IGN94 Pajonal, Malezal, Cardal, Cortaderal, Españal, Jarillal, Quiscal, Juncal, Totoral"/>
+                    <rule filter=" &quot;tipo&quot;  =  'Pajonal, Malezal, Cardal, Cortaderal, Españal, Jarillal, Quiscal, Juncal, Totoral' " symbol="1" scalemindenom="100000" label="IGN94 Pajonal, Malezal, Cardal, Cortaderal, Españal, Jarillal, Quiscal, Juncal, Totoral"/>
+                </rules>
                 <symbols>
                     <symbol alpha="1" type="fill" name="0">
-                        <layer pass="0" class="SimpleFill" locked="0">
-                            <prop k="border_width_map_unit_scale" v="0,0"/>
-                            <prop k="border_width_unit" v="MM"/>
-                            <prop k="color" v="167,103,188,255"/>
-                            <prop k="color_border" v="0,0,0,255"/>
-                            <prop k="joinstyle" v="bevel"/>
-                            <prop k="offset" v="0,0"/>
-                            <prop k="offset_map_unit_scale" v="0,0"/>
-                            <prop k="offset_unit" v="MM"/>
-                            <prop k="style" v="solid"/>
-                            <prop k="style_border" v="solid"/>
-                            <prop k="width_border" v="0.26"/>
+                        <layer pass="0" class="SVGFill" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="outline_width_map_unit_scale" v="0,0"/>
+                            <prop k="outline_width_unit" v="MM"/>
+                            <prop k="pattern_width_map_unit_scale" v="0,0"/>
+                            <prop k="pattern_width_unit" v="MM"/>
+                            <prop k="svgFile" v="ign94_1.svg"/>
+                            <prop k="svgFillColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineWidth" v="0.3"/>
+                            <prop k="svg_outline_width_map_unit_scale" v="0,0"/>
+                            <prop k="svg_outline_width_unit" v="MM"/>
+                            <prop k="width" v="5"/>
+                            <symbol alpha="0" type="line" name="@0@0">
+                                <layer pass="0" class="SimpleLine" locked="0">
+                                    <prop k="capstyle" v="square"/>
+                                    <prop k="color" v="0,0,0,255"/>
+                                    <prop k="customdash" v="5;2"/>
+                                    <prop k="customdash_map_unit_scale" v="0,0"/>
+                                    <prop k="customdash_unit" v="MM"/>
+                                    <prop k="draw_inside_polygon" v="0"/>
+                                    <prop k="joinstyle" v="bevel"/>
+                                    <prop k="offset" v="0"/>
+                                    <prop k="offset_map_unit_scale" v="0,0"/>
+                                    <prop k="offset_unit" v="MM"/>
+                                    <prop k="penstyle" v="no"/>
+                                    <prop k="use_custom_dash" v="0"/>
+                                    <prop k="width" v="0"/>
+                                    <prop k="width_map_unit_scale" v="0,0"/>
+                                    <prop k="width_unit" v="MM"/>
+                                </layer>
+                            </symbol>
+                        </layer>
+                    </symbol>
+                    <symbol alpha="1" type="fill" name="1">
+                        <layer pass="0" class="SVGFill" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="outline_width_map_unit_scale" v="0,0"/>
+                            <prop k="outline_width_unit" v="MM"/>
+                            <prop k="pattern_width_map_unit_scale" v="0,0"/>
+                            <prop k="pattern_width_unit" v="MM"/>
+                            <prop k="svgFile" v="ign94_2.svg"/>
+                            <prop k="svgFillColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineWidth" v="0.3"/>
+                            <prop k="svg_outline_width_map_unit_scale" v="0,0"/>
+                            <prop k="svg_outline_width_unit" v="MM"/>
+                            <prop k="width" v="5"/>
+                            <symbol alpha="0" type="line" name="@1@0">
+                                <layer pass="0" class="SimpleLine" locked="0">
+                                    <prop k="capstyle" v="square"/>
+                                    <prop k="color" v="0,0,0,255"/>
+                                    <prop k="customdash" v="5;2"/>
+                                    <prop k="customdash_map_unit_scale" v="0,0"/>
+                                    <prop k="customdash_unit" v="MM"/>
+                                    <prop k="draw_inside_polygon" v="0"/>
+                                    <prop k="joinstyle" v="bevel"/>
+                                    <prop k="offset" v="0"/>
+                                    <prop k="offset_map_unit_scale" v="0,0"/>
+                                    <prop k="offset_unit" v="MM"/>
+                                    <prop k="penstyle" v="no"/>
+                                    <prop k="use_custom_dash" v="0"/>
+                                    <prop k="width" v="0"/>
+                                    <prop k="width_map_unit_scale" v="0,0"/>
+                                    <prop k="width_unit" v="MM"/>
+                                </layer>
+                            </symbol>
                         </layer>
                     </symbol>
                 </symbols>
-                <rotation/>
-                <sizescale scalemethod="area"/>
             </renderer-v2>
-            <customproperties/>
+            <customproperties>
+                <property key="labeling" value="pal"/>
+                <property key="labeling/addDirectionSymbol" value="false"/>
+                <property key="labeling/angleOffset" value="0"/>
+                <property key="labeling/blendMode" value="0"/>
+                <property key="labeling/bufferBlendMode" value="0"/>
+                <property key="labeling/bufferColorA" value="255"/>
+                <property key="labeling/bufferColorB" value="255"/>
+                <property key="labeling/bufferColorG" value="255"/>
+                <property key="labeling/bufferColorR" value="255"/>
+                <property key="labeling/bufferDraw" value="false"/>
+                <property key="labeling/bufferJoinStyle" value="64"/>
+                <property key="labeling/bufferNoFill" value="false"/>
+                <property key="labeling/bufferSize" value="1"/>
+                <property key="labeling/bufferSizeInMapUnits" value="false"/>
+                <property key="labeling/bufferSizeMapUnitMaxScale" value="0"/>
+                <property key="labeling/bufferSizeMapUnitMinScale" value="0"/>
+                <property key="labeling/bufferTransp" value="0"/>
+                <property key="labeling/centroidInside" value="false"/>
+                <property key="labeling/centroidWhole" value="false"/>
+                <property key="labeling/decimals" value="3"/>
+                <property key="labeling/displayAll" value="false"/>
+                <property key="labeling/dist" value="0"/>
+                <property key="labeling/distInMapUnits" value="false"/>
+                <property key="labeling/distMapUnitMaxScale" value="0"/>
+                <property key="labeling/distMapUnitMinScale" value="0"/>
+                <property key="labeling/enabled" value="false"/>
+                <property key="labeling/fieldName" value=""/>
+                <property key="labeling/fontBold" value="false"/>
+                <property key="labeling/fontCapitals" value="0"/>
+                <property key="labeling/fontFamily" value="Cantarell"/>
+                <property key="labeling/fontItalic" value="false"/>
+                <property key="labeling/fontLetterSpacing" value="0"/>
+                <property key="labeling/fontLimitPixelSize" value="false"/>
+                <property key="labeling/fontMaxPixelSize" value="10000"/>
+                <property key="labeling/fontMinPixelSize" value="3"/>
+                <property key="labeling/fontSize" value="11"/>
+                <property key="labeling/fontSizeInMapUnits" value="false"/>
+                <property key="labeling/fontSizeMapUnitMaxScale" value="0"/>
+                <property key="labeling/fontSizeMapUnitMinScale" value="0"/>
+                <property key="labeling/fontStrikeout" value="false"/>
+                <property key="labeling/fontUnderline" value="false"/>
+                <property key="labeling/fontWeight" value="50"/>
+                <property key="labeling/fontWordSpacing" value="0"/>
+                <property key="labeling/formatNumbers" value="false"/>
+                <property key="labeling/isExpression" value="true"/>
+                <property key="labeling/labelOffsetInMapUnits" value="true"/>
+                <property key="labeling/labelOffsetMapUnitMaxScale" value="0"/>
+                <property key="labeling/labelOffsetMapUnitMinScale" value="0"/>
+                <property key="labeling/labelPerPart" value="false"/>
+                <property key="labeling/leftDirectionSymbol" value="&lt;"/>
+                <property key="labeling/limitNumLabels" value="false"/>
+                <property key="labeling/maxCurvedCharAngleIn" value="20"/>
+                <property key="labeling/maxCurvedCharAngleOut" value="-20"/>
+                <property key="labeling/maxNumLabels" value="2000"/>
+                <property key="labeling/mergeLines" value="false"/>
+                <property key="labeling/minFeatureSize" value="0"/>
+                <property key="labeling/multilineAlign" value="0"/>
+                <property key="labeling/multilineHeight" value="1"/>
+                <property key="labeling/namedStyle" value="Regular"/>
+                <property key="labeling/obstacle" value="true"/>
+                <property key="labeling/placeDirectionSymbol" value="0"/>
+                <property key="labeling/placement" value="1"/>
+                <property key="labeling/placementFlags" value="0"/>
+                <property key="labeling/plussign" value="false"/>
+                <property key="labeling/preserveRotation" value="true"/>
+                <property key="labeling/previewBkgrdColor" value="#ffffff"/>
+                <property key="labeling/priority" value="5"/>
+                <property key="labeling/quadOffset" value="4"/>
+                <property key="labeling/repeatDistance" value="0"/>
+                <property key="labeling/repeatDistanceMapUnitMaxScale" value="0"/>
+                <property key="labeling/repeatDistanceMapUnitMinScale" value="0"/>
+                <property key="labeling/repeatDistanceUnit" value="1"/>
+                <property key="labeling/reverseDirectionSymbol" value="false"/>
+                <property key="labeling/rightDirectionSymbol" value=">"/>
+                <property key="labeling/scaleMax" value="10000000"/>
+                <property key="labeling/scaleMin" value="1"/>
+                <property key="labeling/scaleVisibility" value="false"/>
+                <property key="labeling/shadowBlendMode" value="6"/>
+                <property key="labeling/shadowColorB" value="0"/>
+                <property key="labeling/shadowColorG" value="0"/>
+                <property key="labeling/shadowColorR" value="0"/>
+                <property key="labeling/shadowDraw" value="false"/>
+                <property key="labeling/shadowOffsetAngle" value="135"/>
+                <property key="labeling/shadowOffsetDist" value="1"/>
+                <property key="labeling/shadowOffsetGlobal" value="true"/>
+                <property key="labeling/shadowOffsetMapUnitMaxScale" value="0"/>
+                <property key="labeling/shadowOffsetMapUnitMinScale" value="0"/>
+                <property key="labeling/shadowOffsetUnits" value="1"/>
+                <property key="labeling/shadowRadius" value="1.5"/>
+                <property key="labeling/shadowRadiusAlphaOnly" value="false"/>
+                <property key="labeling/shadowRadiusMapUnitMaxScale" value="0"/>
+                <property key="labeling/shadowRadiusMapUnitMinScale" value="0"/>
+                <property key="labeling/shadowRadiusUnits" value="1"/>
+                <property key="labeling/shadowScale" value="100"/>
+                <property key="labeling/shadowTransparency" value="30"/>
+                <property key="labeling/shadowUnder" value="0"/>
+                <property key="labeling/shapeBlendMode" value="0"/>
+                <property key="labeling/shapeBorderColorA" value="255"/>
+                <property key="labeling/shapeBorderColorB" value="128"/>
+                <property key="labeling/shapeBorderColorG" value="128"/>
+                <property key="labeling/shapeBorderColorR" value="128"/>
+                <property key="labeling/shapeBorderWidth" value="0"/>
+                <property key="labeling/shapeBorderWidthMapUnitMaxScale" value="0"/>
+                <property key="labeling/shapeBorderWidthMapUnitMinScale" value="0"/>
+                <property key="labeling/shapeBorderWidthUnits" value="1"/>
+                <property key="labeling/shapeDraw" value="false"/>
+                <property key="labeling/shapeFillColorA" value="255"/>
+                <property key="labeling/shapeFillColorB" value="255"/>
+                <property key="labeling/shapeFillColorG" value="255"/>
+                <property key="labeling/shapeFillColorR" value="255"/>
+                <property key="labeling/shapeJoinStyle" value="64"/>
+                <property key="labeling/shapeOffsetMapUnitMaxScale" value="0"/>
+                <property key="labeling/shapeOffsetMapUnitMinScale" value="0"/>
+                <property key="labeling/shapeOffsetUnits" value="1"/>
+                <property key="labeling/shapeOffsetX" value="0"/>
+                <property key="labeling/shapeOffsetY" value="0"/>
+                <property key="labeling/shapeRadiiMapUnitMaxScale" value="0"/>
+                <property key="labeling/shapeRadiiMapUnitMinScale" value="0"/>
+                <property key="labeling/shapeRadiiUnits" value="1"/>
+                <property key="labeling/shapeRadiiX" value="0"/>
+                <property key="labeling/shapeRadiiY" value="0"/>
+                <property key="labeling/shapeRotation" value="0"/>
+                <property key="labeling/shapeRotationType" value="0"/>
+                <property key="labeling/shapeSVGFile" value=""/>
+                <property key="labeling/shapeSizeMapUnitMaxScale" value="0"/>
+                <property key="labeling/shapeSizeMapUnitMinScale" value="0"/>
+                <property key="labeling/shapeSizeType" value="0"/>
+                <property key="labeling/shapeSizeUnits" value="1"/>
+                <property key="labeling/shapeSizeX" value="0"/>
+                <property key="labeling/shapeSizeY" value="0"/>
+                <property key="labeling/shapeTransparency" value="0"/>
+                <property key="labeling/shapeType" value="0"/>
+                <property key="labeling/textColorA" value="255"/>
+                <property key="labeling/textColorB" value="0"/>
+                <property key="labeling/textColorG" value="0"/>
+                <property key="labeling/textColorR" value="0"/>
+                <property key="labeling/textTransp" value="0"/>
+                <property key="labeling/upsidedownLabels" value="0"/>
+                <property key="labeling/wrapChar" value=""/>
+                <property key="labeling/xOffset" value="0"/>
+                <property key="labeling/yOffset" value="0"/>
+            </customproperties>
             <blendMode>0</blendMode>
             <featureBlendMode>0</featureBlendMode>
             <layerTransparency>0</layerTransparency>
