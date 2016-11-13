@@ -1,7 +1,7 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
 <qgis projectname="" version="2.4.0-Chugiak">
     <title></title>
-    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="">
         <customproperties/>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="actividades_agropecuarias20161106072023765" name="actividades_agropecuarias">
             <customproperties/>
@@ -126,13 +126,13 @@
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="sue_no_consolidado20161106072031317" name="sue_no_consolidado">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Checked" id="veg_arborea20161106072031338" name="veg_arborea">
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="veg_arborea20161106072031338" name="veg_arborea">
             <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="veg_arbustiva20161106072031358" name="veg_arbustiva">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="veg_cultivos20161106072031379" name="veg_cultivos">
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="veg_cultivos20161106072031379" name="veg_cultivos">
             <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="veg_hidrofila20161106072031400" name="veg_hidrofila">
@@ -426,9 +426,9 @@
                 <legendlayerfile isInOverview="0" layerid="sue_no_consolidado20161106072031317" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="veg_arborea" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="veg_arborea" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="veg_arborea20161106072031338" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="veg_arborea20161106072031338" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="veg_arbustiva" showFeatureCount="0">
@@ -436,8 +436,8 @@
                 <legendlayerfile isInOverview="0" layerid="veg_arbustiva20161106072031358" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="veg_cultivos" showFeatureCount="0">
-            <filegroup open="false" hidden="false">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="veg_cultivos" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="veg_cultivos20161106072031379" visible="0"/>
             </filegroup>
         </legendlayer>
