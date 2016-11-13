@@ -21,7 +21,7 @@ Para instalar las dependencias necesarias y crear la base de datos ejecutar:
 - [ ] Ingresar nuevos elementos en una capa vectorial creada por el usuario, o de las mencionadas anteriormente (geometría y atributos)
 - [ ] Simbología Espejos de Agua
 - [X] Simbología Red Víal
-- [ ] Simbología Vegetación Cultivos
+- [X] Simbología Vegetación Cultivos
 - [ ] Simbología Vegetación Arborea
 - [ ] Simbología Vegetación Hidrófila
 - [ ] Ordenar Capas
