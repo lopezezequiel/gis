@@ -1,7 +1,7 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
 <qgis projectname="" version="2.4.0-Chugiak">
     <title></title>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="">
+    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
         <customproperties/>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="actividades_agropecuarias20161106072023765" name="actividades_agropecuarias">
             <customproperties/>
@@ -10,12 +10,6 @@
             <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="complejo_de_energia_ene20161106072023957" name="complejo_de_energia_ene">
-            <customproperties/>
-        </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="curso_de_agua_hid20161106072023989" name="curso_de_agua_hid">
-            <customproperties/>
-        </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="curvas_de_nivel20161106072024020" name="curvas_de_nivel">
             <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="edif_construcciones_turisticas20161106072024045" name="edif_construcciones_turisticas">
@@ -42,12 +36,6 @@
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="edificios_ferroviarios20161106072024195" name="edificios_ferroviarios">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="ejido20161106072024216" name="ejido">
-            <customproperties/>
-        </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="espejo_de_agua_hid20161106072024238" name="espejo_de_agua_hid">
-            <customproperties/>
-        </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="estructuras_portuarias20161106072024260" name="estructuras_portuarias">
             <customproperties/>
         </layer-tree-layer>
@@ -57,22 +45,10 @@
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="infraestructura_hidro20161106072024301" name="infraestructura_hidro">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="isla20161106072024322" name="isla">
-            <customproperties/>
-        </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="limite_politico_administrativo_lim20161106072024343" name="limite_politico_administrativo_lim">
-            <customproperties/>
-        </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="localidades20161106072024364" name="localidades">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="líneas_de_conducción_ene20161106072024386" name="líneas_de_conducción_ene">
-            <customproperties/>
-        </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="marcas_y_señales20161106072024408" name="marcas_y_señales">
-            <customproperties/>
-        </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="muro_embalse20161106072024432" name="muro_embalse">
             <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="obra_de_comunicación20161106072024452" name="obra_de_comunicación">
@@ -84,15 +60,6 @@
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="otras_edificaciones20161106072024493" name="otras_edificaciones">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="pais_lim20161106072024513" name="pais_lim">
-            <customproperties/>
-        </layer-tree-layer>
-        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="red_vial20161106072024636" name="red_vial">
-            <customproperties/>
-        </layer-tree-layer>
-        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="provincias20161106072024535" name="provincias">
-            <customproperties/>
-        </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="puente_red_vial_puntos20161106072024550" name="puente_red_vial_puntos">
             <customproperties/>
         </layer-tree-layer>
@@ -102,13 +69,49 @@
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="puntos_del_terreno20161106072024593" name="puntos_del_terreno">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="red_ferroviaria20161106072024614" name="red_ferroviaria">
-            <customproperties/>
-        </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="salvado_de_obstaculo20161106072031182" name="salvado_de_obstaculo">
             <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="señalizaciones20161106072031206" name="señalizaciones">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="curvas_de_nivel20161106072024020" name="curvas_de_nivel">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="curso_de_agua_hid20161106072023989" name="curso_de_agua_hid">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="limite_politico_administrativo_lim20161106072024343" name="limite_politico_administrativo_lim">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="líneas_de_conducción_ene20161106072024386" name="líneas_de_conducción_ene">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="muro_embalse20161106072024432" name="muro_embalse">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="red_vial20161106072024636" name="red_vial">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="ejido20161106072024216" name="ejido">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="espejo_de_agua_hid20161106072024238" name="espejo_de_agua_hid">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="isla20161106072024322" name="isla">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="pais_lim20161106072024513" name="pais_lim">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="provincias20161106072024535" name="provincias">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="red_ferroviaria20161106072024614" name="red_ferroviaria">
+            <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="vias_secundarias20161106072031441" name="vias_secundarias">
             <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="sue_congelado20161106072031227" name="sue_congelado">
@@ -126,22 +129,19 @@
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="sue_no_consolidado20161106072031317" name="sue_no_consolidado">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="veg_arborea20161106072031338" name="veg_arborea">
+        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="veg_arborea20161106072031338" name="veg_arborea">
             <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="veg_arbustiva20161106072031358" name="veg_arbustiva">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="veg_cultivos20161106072031379" name="veg_cultivos">
+        <layer-tree-layer expanded="1" checked="Qt::Checked" id="veg_cultivos20161106072031379" name="veg_cultivos">
             <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="veg_hidrofila20161106072031400" name="veg_hidrofila">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="veg_suelo_desnudo20161106072031421" name="veg_suelo_desnudo">
-            <customproperties/>
-        </layer-tree-layer>
-        <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="vias_secundarias20161106072031441" name="vias_secundarias">
+        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="veg_suelo_desnudo20161106072031421" name="veg_suelo_desnudo">
             <customproperties/>
         </layer-tree-layer>
     </layer-tree-group>
@@ -149,10 +149,10 @@
     <mapcanvas>
         <units>degrees</units>
         <extent>
-            <xmin>-73.4640241197922137</xmin>
-            <ymin>-40.01255098071355576</ymin>
-            <xmax>-58.4716485370950636</xmax>
-            <ymax>-27.35282597961428408</ymax>
+            <xmin>-62.42781259993957121</xmin>
+            <ymin>-27.37856935488926879</ymin>
+            <xmax>-62.19355673145987851</xmax>
+            <ymax>-27.18076115174705265</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -236,16 +236,6 @@
                 <legendlayerfile isInOverview="0" layerid="complejo_de_energia_ene20161106072023957" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="curso_de_agua_hid" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="curso_de_agua_hid20161106072023989" visible="0"/>
-            </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="curvas_de_nivel" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="curvas_de_nivel20161106072024020" visible="0"/>
-            </filegroup>
-        </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="edif_construcciones_turisticas" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="edif_construcciones_turisticas20161106072024045" visible="0"/>
@@ -286,16 +276,6 @@
                 <legendlayerfile isInOverview="0" layerid="edificios_ferroviarios20161106072024195" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="ejido" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="ejido20161106072024216" visible="0"/>
-            </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="espejo_de_agua_hid" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="espejo_de_agua_hid20161106072024238" visible="0"/>
-            </filegroup>
-        </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="estructuras_portuarias" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="estructuras_portuarias20161106072024260" visible="0"/>
@@ -311,34 +291,14 @@
                 <legendlayerfile isInOverview="0" layerid="infraestructura_hidro20161106072024301" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="isla" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="isla20161106072024322" visible="0"/>
-            </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="limite_politico_administrativo_lim" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="limite_politico_administrativo_lim20161106072024343" visible="0"/>
-            </filegroup>
-        </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="localidades" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="localidades20161106072024364" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="líneas_de_conducción_ene" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="líneas_de_conducción_ene20161106072024386" visible="0"/>
-            </filegroup>
-        </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="marcas_y_señales" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="marcas_y_señales20161106072024408" visible="0"/>
-            </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="muro_embalse" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="muro_embalse20161106072024432" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="obra_de_comunicación" showFeatureCount="0">
@@ -356,21 +316,6 @@
                 <legendlayerfile isInOverview="0" layerid="otras_edificaciones20161106072024493" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="pais_lim" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="pais_lim20161106072024513" visible="0"/>
-            </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="red_vial" showFeatureCount="0">
-            <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="red_vial20161106072024636" visible="0"/>
-            </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="provincias" showFeatureCount="0">
-            <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="provincias20161106072024535" visible="0"/>
-            </filegroup>
-        </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="puente_red_vial_puntos" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="puente_red_vial_puntos20161106072024550" visible="0"/>
@@ -386,11 +331,6 @@
                 <legendlayerfile isInOverview="0" layerid="puntos_del_terreno20161106072024593" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="red_ferroviaria" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="red_ferroviaria20161106072024614" visible="0"/>
-            </filegroup>
-        </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="salvado_de_obstaculo" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="salvado_de_obstaculo20161106072031182" visible="0"/>
@@ -399,6 +339,71 @@
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="señalizaciones" showFeatureCount="0">
             <filegroup open="true" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="señalizaciones20161106072031206" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="curvas_de_nivel" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="curvas_de_nivel20161106072024020" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="curso_de_agua_hid" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="curso_de_agua_hid20161106072023989" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="limite_politico_administrativo_lim" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="limite_politico_administrativo_lim20161106072024343" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="líneas_de_conducción_ene" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="líneas_de_conducción_ene20161106072024386" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="muro_embalse" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="muro_embalse20161106072024432" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="red_vial" showFeatureCount="0">
+            <filegroup open="false" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="red_vial20161106072024636" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="ejido" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="ejido20161106072024216" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="espejo_de_agua_hid" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="espejo_de_agua_hid20161106072024238" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="isla" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="isla20161106072024322" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="pais_lim" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="pais_lim20161106072024513" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="provincias" showFeatureCount="0">
+            <filegroup open="false" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="provincias20161106072024535" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="red_ferroviaria" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="red_ferroviaria20161106072024614" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="vias_secundarias" showFeatureCount="0">
+            <filegroup open="false" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="vias_secundarias20161106072031441" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="sue_congelado" showFeatureCount="0">
@@ -426,8 +431,8 @@
                 <legendlayerfile isInOverview="0" layerid="sue_no_consolidado20161106072031317" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="veg_arborea" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="veg_arborea" showFeatureCount="0">
+            <filegroup open="false" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="veg_arborea20161106072031338" visible="0"/>
             </filegroup>
         </legendlayer>
@@ -436,9 +441,9 @@
                 <legendlayerfile isInOverview="0" layerid="veg_arbustiva20161106072031358" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="veg_cultivos" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="veg_cultivos" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="veg_cultivos20161106072031379" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="veg_cultivos20161106072031379" visible="1"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="veg_hidrofila" showFeatureCount="0">
@@ -446,14 +451,9 @@
                 <legendlayerfile isInOverview="0" layerid="veg_hidrofila20161106072031400" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="veg_suelo_desnudo" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="veg_suelo_desnudo" showFeatureCount="0">
+            <filegroup open="false" hidden="false">
                 <legendlayerfile isInOverview="0" layerid="veg_suelo_desnudo20161106072031421" visible="0"/>
-            </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="vias_secundarias" showFeatureCount="0">
-            <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="vias_secundarias20161106072031441" visible="0"/>
             </filegroup>
         </legendlayer>
     </legend>
@@ -6846,7 +6846,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="1"/>
+                            <prop k="width" v="3"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -6863,7 +6863,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.6"/>
+                            <prop k="width" v="1.8"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -6880,7 +6880,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.2"/>
+                            <prop k="width" v="0.6"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -6899,7 +6899,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.6"/>
+                            <prop k="width" v="1.8"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -6918,7 +6918,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.3"/>
+                            <prop k="width" v="0.9"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -6937,7 +6937,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.8"/>
+                            <prop k="width" v="2.4"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -6954,7 +6954,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.25"/>
+                            <prop k="width" v="0.75"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -6973,7 +6973,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.6"/>
+                            <prop k="width" v="1.8"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -6990,7 +6990,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.4"/>
+                            <prop k="width" v="1.2"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -7009,7 +7009,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.6"/>
+                            <prop k="width" v="1.8"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -7028,7 +7028,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.6"/>
+                            <prop k="width" v="1.8"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -7045,7 +7045,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.4"/>
+                            <prop k="width" v="1.2"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -7064,7 +7064,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.6"/>
+                            <prop k="width" v="1.8"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -7083,7 +7083,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.6"/>
+                            <prop k="width" v="1.8"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -7102,7 +7102,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.5"/>
+                            <prop k="width" v="1.5"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -7119,7 +7119,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.3"/>
+                            <prop k="width" v="0.9"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -7138,7 +7138,7 @@
                             <prop k="offset_unit" v="MM"/>
                             <prop k="penstyle" v="solid"/>
                             <prop k="use_custom_dash" v="0"/>
-                            <prop k="width" v="0.3"/>
+                            <prop k="width" v="0.9"/>
                             <prop k="width_map_unit_scale" v="0,0"/>
                             <prop k="width_unit" v="MM"/>
                         </layer>
@@ -8736,7 +8736,7 @@
                             <prop k="outline_width_unit" v="MM"/>
                             <prop k="pattern_width_map_unit_scale" v="0,0"/>
                             <prop k="pattern_width_unit" v="MM"/>
-                            <prop k="svgFile" v="palmas2.svg"/>
+                            <prop k="svgFile" v="/home/lopezezequiel/.qgis2/svg/palmas2.svg"/>
                             <prop k="svgFillColor" v="0,0,0,255"/>
                             <prop k="svgOutlineColor" v="0,0,0,255"/>
                             <prop k="svgOutlineWidth" v="0.3"/>
@@ -8771,7 +8771,7 @@
                             <prop k="outline_width_unit" v="MM"/>
                             <prop k="pattern_width_map_unit_scale" v="0,0"/>
                             <prop k="pattern_width_unit" v="MM"/>
-                            <prop k="svgFile" v="palmas2.svg"/>
+                            <prop k="svgFile" v="/home/lopezezequiel/.qgis2/svg/palmas2.svg"/>
                             <prop k="svgFillColor" v="0,0,0,255"/>
                             <prop k="svgOutlineColor" v="0,0,0,255"/>
                             <prop k="svgOutlineWidth" v="0.3"/>
@@ -9256,25 +9256,24 @@
                 </rules>
                 <symbols>
                     <symbol alpha="1" type="fill" name="0">
-                        <layer pass="0" class="LinePatternFill" locked="1">
-                            <prop k="color" v="52,111,107,255"/>
-                            <prop k="distance" v="2"/>
-                            <prop k="distance_map_unit_scale" v="0,0"/>
-                            <prop k="distance_unit" v="MM"/>
-                            <prop k="line_width_map_unit_scale" v="0,0"/>
-                            <prop k="line_width_unit" v="MM"/>
-                            <prop k="lineangle" v="45"/>
-                            <prop k="linewidth" v="0.1"/>
-                            <prop k="offset" v="1"/>
-                            <prop k="offset_map_unit_scale" v="0,0"/>
-                            <prop k="offset_unit" v="MM"/>
+                        <layer pass="0" class="SVGFill" locked="0">
+                            <prop k="angle" v="0"/>
                             <prop k="outline_width_map_unit_scale" v="0,0"/>
                             <prop k="outline_width_unit" v="MM"/>
+                            <prop k="pattern_width_map_unit_scale" v="0,0"/>
+                            <prop k="pattern_width_unit" v="MM"/>
+                            <prop k="svgFile" v="plantacionesperennes01.svg"/>
+                            <prop k="svgFillColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineWidth" v="0.3"/>
+                            <prop k="svg_outline_width_map_unit_scale" v="0,0"/>
+                            <prop k="svg_outline_width_unit" v="MM"/>
+                            <prop k="width" v="20"/>
                             <symbol alpha="1" type="line" name="@0@0">
                                 <layer pass="0" class="SimpleLine" locked="0">
                                     <prop k="capstyle" v="square"/>
-                                    <prop k="color" v="73,158,34,255"/>
-                                    <prop k="customdash" v="5;2;5;2"/>
+                                    <prop k="color" v="0,0,0,255"/>
+                                    <prop k="customdash" v="5;2"/>
                                     <prop k="customdash_map_unit_scale" v="0,0"/>
                                     <prop k="customdash_unit" v="MM"/>
                                     <prop k="draw_inside_polygon" v="0"/>
@@ -9282,9 +9281,9 @@
                                     <prop k="offset" v="0"/>
                                     <prop k="offset_map_unit_scale" v="0,0"/>
                                     <prop k="offset_unit" v="MM"/>
-                                    <prop k="penstyle" v="dash dot"/>
+                                    <prop k="penstyle" v="solid"/>
                                     <prop k="use_custom_dash" v="0"/>
-                                    <prop k="width" v="0.3"/>
+                                    <prop k="width" v="0.26"/>
                                     <prop k="width_map_unit_scale" v="0,0"/>
                                     <prop k="width_unit" v="MM"/>
                                 </layer>
@@ -9292,63 +9291,24 @@
                         </layer>
                     </symbol>
                     <symbol alpha="1" type="fill" name="1">
-                        <layer pass="0" class="PointPatternFill" locked="0">
-                            <prop k="displacement_x" v="0"/>
-                            <prop k="displacement_x_map_unit_scale" v="0,0"/>
-                            <prop k="displacement_x_unit" v="MM"/>
-                            <prop k="displacement_y" v="0"/>
-                            <prop k="displacement_y_map_unit_scale" v="0,0"/>
-                            <prop k="displacement_y_unit" v="MM"/>
-                            <prop k="distance_x" v="1"/>
-                            <prop k="distance_x_map_unit_scale" v="0,0"/>
-                            <prop k="distance_x_unit" v="MM"/>
-                            <prop k="distance_y" v="1"/>
-                            <prop k="distance_y_map_unit_scale" v="0,0"/>
-                            <prop k="distance_y_unit" v="MM"/>
+                        <layer pass="0" class="SVGFill" locked="0">
+                            <prop k="angle" v="0"/>
                             <prop k="outline_width_map_unit_scale" v="0,0"/>
                             <prop k="outline_width_unit" v="MM"/>
-                            <symbol alpha="1" type="marker" name="@1@0">
-                                <layer pass="0" class="SvgMarker" locked="0">
-                                    <prop k="angle" v="0"/>
-                                    <prop k="fill" v="#00ff00"/>
-                                    <prop k="horizontal_anchor_point" v="1"/>
-                                    <prop k="name" v="religion/place_of_worship_bahai3.svg"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="offset_map_unit_scale" v="0,0"/>
-                                    <prop k="offset_unit" v="MM"/>
-                                    <prop k="outline" v="#00ff00"/>
-                                    <prop k="outline-width" v="1"/>
-                                    <prop k="outline_width_map_unit_scale" v="0,0"/>
-                                    <prop k="outline_width_unit" v="MM"/>
-                                    <prop k="scale_method" v="area"/>
-                                    <prop k="size" v="0.6"/>
-                                    <prop k="size_map_unit_scale" v="0,0"/>
-                                    <prop k="size_unit" v="MM"/>
-                                    <prop k="vertical_anchor_point" v="1"/>
-                                </layer>
-                            </symbol>
-                        </layer>
-                    </symbol>
-                    <symbol alpha="1" type="fill" name="2">
-                        <layer pass="0" class="LinePatternFill" locked="1">
-                            <prop k="color" v="52,111,107,255"/>
-                            <prop k="distance" v="2"/>
-                            <prop k="distance_map_unit_scale" v="0,0"/>
-                            <prop k="distance_unit" v="MM"/>
-                            <prop k="line_width_map_unit_scale" v="0,0"/>
-                            <prop k="line_width_unit" v="MM"/>
-                            <prop k="lineangle" v="45"/>
-                            <prop k="linewidth" v="0.1"/>
-                            <prop k="offset" v="1"/>
-                            <prop k="offset_map_unit_scale" v="0,0"/>
-                            <prop k="offset_unit" v="MM"/>
-                            <prop k="outline_width_map_unit_scale" v="0,0"/>
-                            <prop k="outline_width_unit" v="MM"/>
-                            <symbol alpha="1" type="line" name="@2@0">
+                            <prop k="pattern_width_map_unit_scale" v="0,0"/>
+                            <prop k="pattern_width_unit" v="MM"/>
+                            <prop k="svgFile" v="plantacionesperennes02.svg"/>
+                            <prop k="svgFillColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineWidth" v="0.3"/>
+                            <prop k="svg_outline_width_map_unit_scale" v="0,0"/>
+                            <prop k="svg_outline_width_unit" v="MM"/>
+                            <prop k="width" v="20"/>
+                            <symbol alpha="1" type="line" name="@1@0">
                                 <layer pass="0" class="SimpleLine" locked="0">
                                     <prop k="capstyle" v="square"/>
-                                    <prop k="color" v="73,158,34,255"/>
-                                    <prop k="customdash" v="5;2;5;2"/>
+                                    <prop k="color" v="0,0,0,255"/>
+                                    <prop k="customdash" v="5;2"/>
                                     <prop k="customdash_map_unit_scale" v="0,0"/>
                                     <prop k="customdash_unit" v="MM"/>
                                     <prop k="draw_inside_polygon" v="0"/>
@@ -9356,9 +9316,44 @@
                                     <prop k="offset" v="0"/>
                                     <prop k="offset_map_unit_scale" v="0,0"/>
                                     <prop k="offset_unit" v="MM"/>
-                                    <prop k="penstyle" v="dash dot"/>
+                                    <prop k="penstyle" v="solid"/>
                                     <prop k="use_custom_dash" v="0"/>
-                                    <prop k="width" v="0.3"/>
+                                    <prop k="width" v="0.26"/>
+                                    <prop k="width_map_unit_scale" v="0,0"/>
+                                    <prop k="width_unit" v="MM"/>
+                                </layer>
+                            </symbol>
+                        </layer>
+                    </symbol>
+                    <symbol alpha="1" type="fill" name="2">
+                        <layer pass="0" class="SVGFill" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="outline_width_map_unit_scale" v="0,0"/>
+                            <prop k="outline_width_unit" v="MM"/>
+                            <prop k="pattern_width_map_unit_scale" v="0,0"/>
+                            <prop k="pattern_width_unit" v="MM"/>
+                            <prop k="svgFile" v="plantacionesperennes01.svg"/>
+                            <prop k="svgFillColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineWidth" v="0.3"/>
+                            <prop k="svg_outline_width_map_unit_scale" v="0,0"/>
+                            <prop k="svg_outline_width_unit" v="MM"/>
+                            <prop k="width" v="20"/>
+                            <symbol alpha="1" type="line" name="@2@0">
+                                <layer pass="0" class="SimpleLine" locked="0">
+                                    <prop k="capstyle" v="square"/>
+                                    <prop k="color" v="0,0,0,255"/>
+                                    <prop k="customdash" v="5;2"/>
+                                    <prop k="customdash_map_unit_scale" v="0,0"/>
+                                    <prop k="customdash_unit" v="MM"/>
+                                    <prop k="draw_inside_polygon" v="0"/>
+                                    <prop k="joinstyle" v="bevel"/>
+                                    <prop k="offset" v="0"/>
+                                    <prop k="offset_map_unit_scale" v="0,0"/>
+                                    <prop k="offset_unit" v="MM"/>
+                                    <prop k="penstyle" v="solid"/>
+                                    <prop k="use_custom_dash" v="0"/>
+                                    <prop k="width" v="0.26"/>
                                     <prop k="width_map_unit_scale" v="0,0"/>
                                     <prop k="width_unit" v="MM"/>
                                 </layer>

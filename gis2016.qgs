@@ -1,7 +1,7 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
 <qgis projectname="" version="2.4.0-Chugiak">
     <title></title>
-    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="">
         <customproperties/>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="actividades_agropecuarias20161106072023765" name="actividades_agropecuarias">
             <customproperties/>
@@ -90,7 +90,7 @@
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="muro_embalse20161106072024432" name="muro_embalse">
             <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="0" checked="Qt::Checked" id="red_vial20161106072024636" name="red_vial">
+        <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="red_vial20161106072024636" name="red_vial">
             <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer expanded="1" checked="Qt::Unchecked" id="ejido20161106072024216" name="ejido">
@@ -149,10 +149,10 @@
     <mapcanvas>
         <units>degrees</units>
         <extent>
-            <xmin>-60.24236812300479471</xmin>
-            <ymin>-29.28030591255799564</ymin>
-            <xmax>-56.49427422733013771</xmax>
-            <ymax>-26.1153746622828713</ymax>
+            <xmin>-64.60171236734441891</xmin>
+            <ymin>-29.7452348086297178</ymin>
+            <xmax>-60.85361847166746685</xmax>
+            <ymax>-26.58030355835263947</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -366,9 +366,9 @@
                 <legendlayerfile isInOverview="0" layerid="muro_embalse20161106072024432" visible="0"/>
             </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="red_vial" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="red_vial" showFeatureCount="0">
             <filegroup open="false" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="red_vial20161106072024636" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="red_vial20161106072024636" visible="0"/>
             </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="ejido" showFeatureCount="0">
@@ -8736,7 +8736,7 @@
                             <prop k="outline_width_unit" v="MM"/>
                             <prop k="pattern_width_map_unit_scale" v="0,0"/>
                             <prop k="pattern_width_unit" v="MM"/>
-                            <prop k="svgFile" v="palmas2.svg"/>
+                            <prop k="svgFile" v="/home/lopezezequiel/.qgis2/svg/palmas2.svg"/>
                             <prop k="svgFillColor" v="0,0,0,255"/>
                             <prop k="svgOutlineColor" v="0,0,0,255"/>
                             <prop k="svgOutlineWidth" v="0.3"/>
@@ -8771,7 +8771,7 @@
                             <prop k="outline_width_unit" v="MM"/>
                             <prop k="pattern_width_map_unit_scale" v="0,0"/>
                             <prop k="pattern_width_unit" v="MM"/>
-                            <prop k="svgFile" v="palmas2.svg"/>
+                            <prop k="svgFile" v="/home/lopezezequiel/.qgis2/svg/palmas2.svg"/>
                             <prop k="svgFillColor" v="0,0,0,255"/>
                             <prop k="svgOutlineColor" v="0,0,0,255"/>
                             <prop k="svgOutlineWidth" v="0.3"/>
@@ -9256,25 +9256,24 @@
                 </rules>
                 <symbols>
                     <symbol alpha="1" type="fill" name="0">
-                        <layer pass="0" class="LinePatternFill" locked="1">
-                            <prop k="color" v="52,111,107,255"/>
-                            <prop k="distance" v="2"/>
-                            <prop k="distance_map_unit_scale" v="0,0"/>
-                            <prop k="distance_unit" v="MM"/>
-                            <prop k="line_width_map_unit_scale" v="0,0"/>
-                            <prop k="line_width_unit" v="MM"/>
-                            <prop k="lineangle" v="45"/>
-                            <prop k="linewidth" v="0.1"/>
-                            <prop k="offset" v="1"/>
-                            <prop k="offset_map_unit_scale" v="0,0"/>
-                            <prop k="offset_unit" v="MM"/>
+                        <layer pass="0" class="SVGFill" locked="0">
+                            <prop k="angle" v="0"/>
                             <prop k="outline_width_map_unit_scale" v="0,0"/>
                             <prop k="outline_width_unit" v="MM"/>
+                            <prop k="pattern_width_map_unit_scale" v="0,0"/>
+                            <prop k="pattern_width_unit" v="MM"/>
+                            <prop k="svgFile" v="plantacionesperennes01.svg"/>
+                            <prop k="svgFillColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineWidth" v="0.3"/>
+                            <prop k="svg_outline_width_map_unit_scale" v="0,0"/>
+                            <prop k="svg_outline_width_unit" v="MM"/>
+                            <prop k="width" v="18"/>
                             <symbol alpha="1" type="line" name="@0@0">
                                 <layer pass="0" class="SimpleLine" locked="0">
                                     <prop k="capstyle" v="square"/>
-                                    <prop k="color" v="73,158,34,255"/>
-                                    <prop k="customdash" v="5;2;5;2"/>
+                                    <prop k="color" v="0,0,0,255"/>
+                                    <prop k="customdash" v="5;2"/>
                                     <prop k="customdash_map_unit_scale" v="0,0"/>
                                     <prop k="customdash_unit" v="MM"/>
                                     <prop k="draw_inside_polygon" v="0"/>
@@ -9282,9 +9281,9 @@
                                     <prop k="offset" v="0"/>
                                     <prop k="offset_map_unit_scale" v="0,0"/>
                                     <prop k="offset_unit" v="MM"/>
-                                    <prop k="penstyle" v="dash dot"/>
+                                    <prop k="penstyle" v="solid"/>
                                     <prop k="use_custom_dash" v="0"/>
-                                    <prop k="width" v="0.3"/>
+                                    <prop k="width" v="0.26"/>
                                     <prop k="width_map_unit_scale" v="0,0"/>
                                     <prop k="width_unit" v="MM"/>
                                 </layer>
@@ -9292,63 +9291,24 @@
                         </layer>
                     </symbol>
                     <symbol alpha="1" type="fill" name="1">
-                        <layer pass="0" class="PointPatternFill" locked="0">
-                            <prop k="displacement_x" v="0"/>
-                            <prop k="displacement_x_map_unit_scale" v="0,0"/>
-                            <prop k="displacement_x_unit" v="MM"/>
-                            <prop k="displacement_y" v="0"/>
-                            <prop k="displacement_y_map_unit_scale" v="0,0"/>
-                            <prop k="displacement_y_unit" v="MM"/>
-                            <prop k="distance_x" v="1"/>
-                            <prop k="distance_x_map_unit_scale" v="0,0"/>
-                            <prop k="distance_x_unit" v="MM"/>
-                            <prop k="distance_y" v="1"/>
-                            <prop k="distance_y_map_unit_scale" v="0,0"/>
-                            <prop k="distance_y_unit" v="MM"/>
+                        <layer pass="0" class="SVGFill" locked="0">
+                            <prop k="angle" v="0"/>
                             <prop k="outline_width_map_unit_scale" v="0,0"/>
                             <prop k="outline_width_unit" v="MM"/>
-                            <symbol alpha="1" type="marker" name="@1@0">
-                                <layer pass="0" class="SvgMarker" locked="0">
-                                    <prop k="angle" v="0"/>
-                                    <prop k="fill" v="#00ff00"/>
-                                    <prop k="horizontal_anchor_point" v="1"/>
-                                    <prop k="name" v="religion/place_of_worship_bahai3.svg"/>
-                                    <prop k="offset" v="0,0"/>
-                                    <prop k="offset_map_unit_scale" v="0,0"/>
-                                    <prop k="offset_unit" v="MM"/>
-                                    <prop k="outline" v="#00ff00"/>
-                                    <prop k="outline-width" v="1"/>
-                                    <prop k="outline_width_map_unit_scale" v="0,0"/>
-                                    <prop k="outline_width_unit" v="MM"/>
-                                    <prop k="scale_method" v="area"/>
-                                    <prop k="size" v="0.6"/>
-                                    <prop k="size_map_unit_scale" v="0,0"/>
-                                    <prop k="size_unit" v="MM"/>
-                                    <prop k="vertical_anchor_point" v="1"/>
-                                </layer>
-                            </symbol>
-                        </layer>
-                    </symbol>
-                    <symbol alpha="1" type="fill" name="2">
-                        <layer pass="0" class="LinePatternFill" locked="1">
-                            <prop k="color" v="52,111,107,255"/>
-                            <prop k="distance" v="2"/>
-                            <prop k="distance_map_unit_scale" v="0,0"/>
-                            <prop k="distance_unit" v="MM"/>
-                            <prop k="line_width_map_unit_scale" v="0,0"/>
-                            <prop k="line_width_unit" v="MM"/>
-                            <prop k="lineangle" v="45"/>
-                            <prop k="linewidth" v="0.1"/>
-                            <prop k="offset" v="1"/>
-                            <prop k="offset_map_unit_scale" v="0,0"/>
-                            <prop k="offset_unit" v="MM"/>
-                            <prop k="outline_width_map_unit_scale" v="0,0"/>
-                            <prop k="outline_width_unit" v="MM"/>
-                            <symbol alpha="1" type="line" name="@2@0">
+                            <prop k="pattern_width_map_unit_scale" v="0,0"/>
+                            <prop k="pattern_width_unit" v="MM"/>
+                            <prop k="svgFile" v="plantacionesperennes02.svg"/>
+                            <prop k="svgFillColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineWidth" v="0.3"/>
+                            <prop k="svg_outline_width_map_unit_scale" v="0,0"/>
+                            <prop k="svg_outline_width_unit" v="MM"/>
+                            <prop k="width" v="4.8"/>
+                            <symbol alpha="1" type="line" name="@1@0">
                                 <layer pass="0" class="SimpleLine" locked="0">
                                     <prop k="capstyle" v="square"/>
-                                    <prop k="color" v="73,158,34,255"/>
-                                    <prop k="customdash" v="5;2;5;2"/>
+                                    <prop k="color" v="0,0,0,255"/>
+                                    <prop k="customdash" v="5;2"/>
                                     <prop k="customdash_map_unit_scale" v="0,0"/>
                                     <prop k="customdash_unit" v="MM"/>
                                     <prop k="draw_inside_polygon" v="0"/>
@@ -9356,9 +9316,44 @@
                                     <prop k="offset" v="0"/>
                                     <prop k="offset_map_unit_scale" v="0,0"/>
                                     <prop k="offset_unit" v="MM"/>
-                                    <prop k="penstyle" v="dash dot"/>
+                                    <prop k="penstyle" v="solid"/>
                                     <prop k="use_custom_dash" v="0"/>
-                                    <prop k="width" v="0.3"/>
+                                    <prop k="width" v="0.26"/>
+                                    <prop k="width_map_unit_scale" v="0,0"/>
+                                    <prop k="width_unit" v="MM"/>
+                                </layer>
+                            </symbol>
+                        </layer>
+                    </symbol>
+                    <symbol alpha="1" type="fill" name="2">
+                        <layer pass="0" class="SVGFill" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="outline_width_map_unit_scale" v="0,0"/>
+                            <prop k="outline_width_unit" v="MM"/>
+                            <prop k="pattern_width_map_unit_scale" v="0,0"/>
+                            <prop k="pattern_width_unit" v="MM"/>
+                            <prop k="svgFile" v="plantacionesperennes01.svg"/>
+                            <prop k="svgFillColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineColor" v="0,0,0,255"/>
+                            <prop k="svgOutlineWidth" v="0.3"/>
+                            <prop k="svg_outline_width_map_unit_scale" v="0,0"/>
+                            <prop k="svg_outline_width_unit" v="MM"/>
+                            <prop k="width" v="18"/>
+                            <symbol alpha="1" type="line" name="@2@0">
+                                <layer pass="0" class="SimpleLine" locked="0">
+                                    <prop k="capstyle" v="square"/>
+                                    <prop k="color" v="0,0,0,255"/>
+                                    <prop k="customdash" v="5;2"/>
+                                    <prop k="customdash_map_unit_scale" v="0,0"/>
+                                    <prop k="customdash_unit" v="MM"/>
+                                    <prop k="draw_inside_polygon" v="0"/>
+                                    <prop k="joinstyle" v="bevel"/>
+                                    <prop k="offset" v="0"/>
+                                    <prop k="offset_map_unit_scale" v="0,0"/>
+                                    <prop k="offset_unit" v="MM"/>
+                                    <prop k="penstyle" v="solid"/>
+                                    <prop k="use_custom_dash" v="0"/>
+                                    <prop k="width" v="0.26"/>
                                     <prop k="width_map_unit_scale" v="0,0"/>
                                     <prop k="width_unit" v="MM"/>
                                 </layer>
