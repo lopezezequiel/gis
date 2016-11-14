@@ -51,7 +51,7 @@ VIRTUALHOST_CONF="
 clear
 sudo echo "need sudo" > /dev/null
 
-for D in apache2 qgis qgis-mapserver libapache2-mod-fcgid postgresql postgresql-9.4-postgis-2.1 pgadmin3
+for D in apache2 qgis qgis-mapserver libapache2-mod-fcgid postgresql postgresql-9.4-postgis-2.1 pgadmin3 php5 libapache2-mod-php5 php5-pgsql
 do
 	if [ $(isInstalled $D) -eq 0 ];
 	then

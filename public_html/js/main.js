@@ -5,6 +5,7 @@ $gis2016.dom.mapBox = document.getElementById('map');
 $gis2016.dom.layersBox = document.getElementById('layersBox');
 $gis2016.dom.infoBox = document.getElementById('infoBox');
 $gis2016.dom.coordinatesBox = document.getElementById('coordinatesBox');
+$gis2016.dom.legendImage = document.getElementById('legendImage');
 
 
 /***********************************************************************
@@ -63,6 +64,14 @@ $gis2016.fn.loadLayer = function(layerData) {
 
 	var label = $gis2016.fn.createCheckBoxLabel(layerData);
 	$gis2016.dom.layersBox.appendChild(label);
+	$(label).mouseenter(function() {
+		$(legendImage).attr(
+			"src", 
+			layerData.url + '&SERVICE=WMS&REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&LAYER=' + layerData.name
+		).show();
+	}).mouseleave(function() {
+		$(legendImage).hide();
+	})
 	
 	$gis2016.dom.layersBox.appendChild(document.createElement('br'));
 	

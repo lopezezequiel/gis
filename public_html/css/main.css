@@ -2,6 +2,7 @@ html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 
 #map {
@@ -17,7 +18,7 @@ html, body {
     width: 100%;
     background-color: rgba(0,60,136,.5);
     color: #FFF;
-    z-index: 100;
+    z-index: 1000;
 }
 
 #coordinatesBox {
@@ -27,7 +28,7 @@ html, body {
     width: 100%;
     background-color: rgba(0,60,136,.5);
     color: #FFF;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .ol-scale-line {
@@ -67,18 +68,18 @@ html, body {
 }
 
 .layers-box-control {
-	top: 65px;
-	left: .5em;
+	top: 8px;
+	left: 98px;
 }
 
 .measure-tool-control {
-	top: 96px;
-	left: .5em;
+	top: 8px;
+	left: 68px;
 }
 
 .draw-tool-control {
 	top: 8px;
-	left: 40px;
+	left: 38px;
     width: auto;
 }
 
@@ -121,4 +122,13 @@ html, body {
 
 .pencil-icon {
 	background-image: url(/img/icon/pencil.png);
+}
+
+#legendImage {
+	background-color: #CCC;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	z-index: 800;
+	border: 5px solid #CCC;
 }
