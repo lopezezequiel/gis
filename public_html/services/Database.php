@@ -11,7 +11,7 @@ class Database
 
     public static function getInstance() {
         if (!(self::$db instanceof \PDO)) {
-            self::$db = new \PDO('pgsql:host=localhost;port=5432;dbname=gisdb20162;user=postgres;password=postgres');
+            self::$db = new \PDO('pgsql:host=localhost;port=5432;dbname=gisdb2016_edit;user=postgres;password=postgres');
             self::$db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         }
         return self::$db;
