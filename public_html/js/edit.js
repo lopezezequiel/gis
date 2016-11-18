@@ -7,7 +7,8 @@ $gis2016.dom.mapBox = document.getElementById('map');
 $gis2016.dom.layersBox = document.getElementById('layersBox');
 $gis2016.dom.infoBox = document.getElementById('infoBox');
 $gis2016.dom.coordinatesBox = document.getElementById('coordinatesBox');
-$gis2016.dom.geometryFormBox = document.getElementById('geometryFormBox');
+$gis2016.dom.formBox = document.getElementById('formBox');
+$gis2016.dom.addLayerButton = document.getElementById('addLayer-button');
 
 
 /***********************************************************************
@@ -279,7 +280,7 @@ $gis2016.GeometryForm = function(layer, geom) {
 	cancel.appendChild(document.createTextNode('Cancelar'));
 	form.appendChild(cancel);
 	$(cancel).click(function() {
-		$($gis2016.dom.geometryFormBox).hide();
+		$($gis2016.dom.formBox).hide();
 	});
 
 	var accept = document.createElement('button');
@@ -295,19 +296,177 @@ $gis2016.GeometryForm = function(layer, geom) {
 		
 
 		layer.add(data, function() {
-			$($gis2016.dom.geometryFormBox).hide();
+			$($gis2016.dom.formBox).hide();
 		}, function() {
 			alert('No se pudo agregar la geometría');
 		});
 	});
 	
-	$($gis2016.dom.geometryFormBox)
+	$($gis2016.dom.formBox)
 	.empty()
 	.append(form)
 	.show();
 	
 };
 
+
+
+$gis2016.AddLayerForm = function() {
+
+	var form = document.createElement('form');
+	form.onsubmit = function() {
+		return false;
+	}
+	
+	
+		
+	var cancel = document.createElement('button');
+	cancel.appendChild(document.createTextNode('Cancelar'));
+	form.appendChild(cancel);
+	$(cancel).click(function() {
+		$($gis2016.dom.formBox).hide();
+	});
+	
+	
+		
+	var accept = document.createElement('button');
+	accept.appendChild(document.createTextNode('Aceptar'));
+	form.appendChild(accept);
+	form.appendChild(document.createElement('hr'));
+
+
+	var label = document.createElement('label');
+	label.appendChild(document.createTextNode('Nombre de capa'));
+	var input_layerName = document.createElement('input');
+	input_layerName.type = 'text';
+	
+	form.appendChild(label);
+	form.appendChild(input_layerName);
+	form.appendChild(document.createElement('br'));
+
+	var label = document.createElement('label');
+	label.appendChild(document.createTextNode('Tipo de capa'));
+	var input_layerType = document.createElement('select');
+	var option1 = document.createElement('option');
+	option1.value = 'Point';
+	option1.appendChild(document.createTextNode('Punto'));
+	input_layerType.appendChild(option1);
+	var option2 = document.createElement('option');
+	option2.value = 'MultiLineString';
+	option2.appendChild(document.createTextNode('Linea'));
+	input_layerType.appendChild(option2);
+	var option3 = document.createElement('option');
+	option3.value = 'MultiPolygon';
+	option3.appendChild(document.createTextNode('Poligono'));
+	input_layerType.appendChild(option3);
+	
+	
+	form.appendChild(label);
+	form.appendChild(input_layerType);
+	form.appendChild(document.createElement('br'));
+	form.appendChild(document.createElement('hr'));
+	form.appendChild(document.createTextNode('Attributos'));
+	var button = document.createElement('button');
+	button.appendChild(document.createTextNode('+'));
+	form.appendChild(button);
+	form.appendChild(document.createElement('br'));
+
+
+	$(accept).click(function() {
+		//$gis2016.SyncLayer.addLayer();
+		var schema = {
+			name: input_layerName.value, 
+			fields: $gis2016.fn.getFormData(form)
+		}
+		schema.fields.geom = input_layerType.options[input_layerType.selectedIndex].value;
+		console.log(schema);
+		$($gis2016.dom.formBox).hide();
+	});
+	
+	var addAttribute = function() {
+		var input_attribute = document.createElement('input');
+		input_attribute.type = 'text';
+		
+		$(input_attribute).change(function() {
+			this.name = this.value;
+			if(this.name == '') {
+				delete this.name;
+			}
+		});
+
+		var input_attributeType = document.createElement('select');
+		var option1 = document.createElement('option');
+		option1.value = 'Integer';
+		option1.appendChild(document.createTextNode('Entero'));
+		input_attributeType.appendChild(option1);
+		var option2 = document.createElement('option');
+		option2.value = 'String';
+		option2.appendChild(document.createTextNode('Texto'));
+		input_attributeType.appendChild(option2);
+		var option3 = document.createElement('option');
+		option3.value = 'Decimal';
+		option3.appendChild(document.createTextNode('Real'));
+		input_attributeType.appendChild(option3);
+		var option4 = document.createElement('option');
+		option4.value = 'Date';
+		option4.appendChild(document.createTextNode('Fecha'));
+		input_attributeType.appendChild(option4);
+		form.appendChild(input_attribute);
+		form.appendChild(input_attributeType);
+
+		var button = document.createElement('button');
+		button.appendChild(document.createTextNode('X'));
+		form.appendChild(button);
+		
+		var br = document.createElement('br');
+		form.appendChild(br);
+
+		$(button).click(function() {
+			button.parentNode.removeChild(input_attribute);
+			button.parentNode.removeChild(input_attributeType);
+			button.parentNode.removeChild(br);
+			button.parentNode.removeChild(button);
+		});
+		
+		input_attribute['data-type'] = input_attributeType;
+	
+	}
+	
+	addAttribute();
+	$(button).click(function() {
+		addAttribute();
+	});
+	
+	
+	$($gis2016.dom.formBox)
+	.empty()
+	.append(form)
+	.show();
+	
+	
+	
+/*
+
+	var accept = document.createElement('button');
+	accept.appendChild(document.createTextNode('Aceptar'));
+	form.appendChild(accept);
+	$(accept).click(function() {
+		var format = new ol.format.GeoJSON();
+		var data = $gis2016.fn.getFormData(form);
+		data.geom = format.writeFeature(geom, {
+			featureProjection: $gis2016.map.getView().getProjection()
+		});
+		data['geom'] = JSON.parse(data.geom).geometry;
+		
+
+		layer.add(data, function() {
+			$($gis2016.dom.formBox).hide();
+		}, function() {
+			alert('No se pudo agregar la geometría');
+		});
+	});
+	*/
+};
 
 
 /***********************************************************************
@@ -833,3 +992,6 @@ $gis2016.map.addControl(new ol.control.ScaleLine());
 
 $('.draw-tool-button').hide();
 
+$($gis2016.dom.addLayerButton).click(function() {
+	$gis2016.AddLayerForm();
+});

@@ -153,7 +153,7 @@ html, body {
 	background-color: rgba(230,230,230,.5);
 }
 
-#geometryFormBox {
+#formBox {
     position: fixed;
 	z-index: 10000;
 	width: 100%;
@@ -162,4 +162,8 @@ html, body {
 	top: 0;
 	left: 0;
 	display: none;
+}
+
+#addLayer-button {
+	margin-top: 40px;
 }
