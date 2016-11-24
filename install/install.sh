@@ -20,6 +20,7 @@ ROOT="`dirname \"$0\"`"
 ROOT=$(absPath $ROOT/..)
 WMS_URL="/cgi-bin/qgis_mapserv.fcgi?MAP=$ROOT/qgis/gis2016.qgs"
 PG_DB=gisdb2016
+PG_DB_edit=gisdb2016_edit
 VIRTUALHOST_DOMAIN=gis2016.com
 VIRTUALHOST_ROOT=$(absPath $ROOT/public_html)
 VIRTUALHOST_NAME=gis2016.conf
@@ -94,6 +95,18 @@ CREATE DATABASE $PG_DB
        LC_CTYPE = 'es_AR.UTF-8'
        CONNECTION LIMIT = -1;" > /dev/null
 sudo -u postgres psql -d $PG_DB -c "CREATE EXTENSION postgis" > /dev/null
+
+echo "Creando base de datos '$PG_DB_edit'..."
+sudo -u postgres psql -c "DROP DATABASE IF EXISTS $PG_DB_edit;"  > /dev/null
+sudo -u postgres psql -c "
+CREATE DATABASE $PG_DB_edit
+  WITH OWNER = postgres
+       ENCODING = 'UTF8'
+       TABLESPACE = pg_default
+       LC_COLLATE = 'es_AR.UTF-8'
+       LC_CTYPE = 'es_AR.UTF-8'
+       CONNECTION LIMIT = -1;" > /dev/null
+sudo -u postgres psql -d $PG_DB_edit -c "CREATE EXTENSION postgis" > /dev/null
 
 echo "Descomprimiendo datos..."
 sudo 7z x -y -o"$ROOT/install/pgdump" "$ROOT/install/pgdump/gisdb2016.dump.7z.001" > /dev/null
