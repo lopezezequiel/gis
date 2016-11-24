@@ -16,10 +16,10 @@ Para instalar las dependencias necesarias y crear la base de datos ejecutar:
 - [X] Activar/Desactivar capas
 - [X] Mostrar la leyenda de las capas (Clases de la simbología).
 - [X] Mostrar escala de visualización.
-- [X] Consulta gráfica (punto y rectangulo) para cada capa.
+- [ ] Consulta gráfica (punto y rectangulo) para cada capa.
 - [X] Medición de distancias
-- [ ] Ingresar nuevos elementos en una capa vectorial creada por el usuario, o de las mencionadas anteriormente (geometría y atributos)
-- [ ] Simbología Espejos de Agua
+- [X] Ingresar nuevos elementos en una capa vectorial creada por el usuario, o de las mencionadas anteriormente (geometría y atributos)
+- [X] Simbología Espejos de Agua
 - [X] Simbología Red Víal
 - [X] Simbología Vegetación Cultivos
 - [X] Simbología Vegetación Arborea
@@ -32,4 +32,7 @@ Para instalar las dependencias necesarias y crear la base de datos ejecutar:
 - [ ] Permitir ordenar capas
 - [ ] Favicons
 - [ ] Simbología Restante
-
+- [ ] Agregar volver a escala original
+- [ ] Agregar escala
+- [ ] Mostrar una capa base
+- [ ] Corregir simbología red vial
