@@ -63,7 +63,7 @@ $gis2016.SyncLayer = function(schema) {
 			source.addFeatures(format.readFeatures(
 				featureCollection,
 				{
-					featureProjection: $gis2016.map.getView().getProjection()
+					featureProjection: $gis2016.map.getView().getProjection().getCode()
 				} 
 			));
 		}
@@ -394,7 +394,7 @@ $gis2016.fn.GeometryForm = function(layer, geom) {
 		var format = new ol.format.GeoJSON();
 		var data = $gis2016.fn.getFormData(form);
 		data.geom = format.writeFeature(geom, {
-			featureProjection: $gis2016.map.getView().getProjection()
+			featureProjection: $gis2016.map.getView().getProjection().getCode()
 		});
 		data['geom'] = JSON.parse(data.geom).geometry;
 
@@ -1179,7 +1179,7 @@ $gis2016.tools.measureLineString = new (function(map){
  **********************************************************************/
 $gis2016.controls.mousePosition = new ol.control.MousePosition({
 	coordinateFormat: $gis2016.fn.formatCoordinates,
-	projection: $gis2016.map.getView().getProjection(),
+	projection: $gis2016.map.getView().getProjection().getCode(),
 	className: 'no-class',
 	target: $gis2016.dom.coordinatesBox,
 	undefinedHTML: '&nbsp;'
