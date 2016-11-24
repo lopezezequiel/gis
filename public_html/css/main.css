@@ -83,6 +83,11 @@ html, body {
     width: auto;
 }
 
+.layer-add-control {
+	top: 8px;
+	left: 128px;
+}
+
 .control-button, .control-button, .control-button {
 	background-repeat: no-repeat;
 	background-size: 80% 80%;
@@ -108,6 +113,10 @@ html, body {
 	background-image: url(/img/icon/layers.png);
 }
 
+.layer-add-icon {
+	background-image: url(/img/icon/layer-add.png);
+}
+
 .broom-icon {
 	background-image: url(/img/icon/dot-and-circle.png);
 }
@@ -126,7 +135,6 @@ html, body {
 
 #legendImage {
 	background-color: #CCC;
-	margin: auto;
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
 	z-index: 800;
@@ -142,6 +150,10 @@ html, body {
 	margin-top: 40px;
 }
 
+#layer-list li label{
+	display: inline;
+	font-weight: normal;
+}
 
 #layer-list-element {
 	float: left;
@@ -153,13 +165,25 @@ html, body {
 	background-color: rgba(230,230,230,.5);
 }
 
-#geometryFormBox {
+#formBox {
     position: fixed;
 	z-index: 10000;
 	width: 100%;
 	height: 100%;
-	background-color: #b48484;
+	padding: 10px;
+	background-color: #809ec4;
+	color: #FFF;
 	top: 0;
 	left: 0;
 	display: none;
+	overflow-y: auto;
 }
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #a0bee4;
+}
+
+.read-only-layer {
+	color: #FFCCCC;
+}
+
