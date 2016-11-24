@@ -149,10 +149,10 @@
     <mapcanvas>
         <units>degrees</units>
         <extent>
-            <xmin>-68.71230743239792105</xmin>
-            <ymin>-29.52583290820051332</ymin>
-            <xmax>-58.33661260596331743</xmax>
-            <ymax>-20.76448334932295836</ymax>
+            <xmin>-65.18695768938398771</xmin>
+            <ymin>-25.95869802239531765</ymin>
+            <xmax>-62.59303398277175745</xmax>
+            <ymax>-23.768360632672902</ymax>
         </extent>
         <projections>0</projections>
         <destinationsrs>
@@ -9399,7 +9399,7 @@
             <excludeAttributesWFS/>
             <attributeactions/>
         </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+        <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>veg_cultivos20161106072031379</id>
             <datasource>dbname='gisdb2016' host=localhost port=5432 user='postgres' password='postgres' sslmode=disable key='gid' srid=4326 type=MULTIPOLYGON table="public"."veg_cultivos" (geom) sql=</datasource>
             <title></title>
@@ -9437,7 +9437,7 @@
                             <prop k="outline_width_unit" v="MM"/>
                             <prop k="pattern_width_map_unit_scale" v="0,0"/>
                             <prop k="pattern_width_unit" v="MM"/>
-                            <prop k="svgFile" v="plantacionesperennes01.svg"/>
+                            <prop k="svgFile" v="ign90_1.svg"/>
                             <prop k="svgFillColor" v="0,0,0,255"/>
                             <prop k="svgOutlineColor" v="0,0,0,255"/>
                             <prop k="svgOutlineWidth" v="0.3"/>
@@ -9472,7 +9472,7 @@
                             <prop k="outline_width_unit" v="MM"/>
                             <prop k="pattern_width_map_unit_scale" v="0,0"/>
                             <prop k="pattern_width_unit" v="MM"/>
-                            <prop k="svgFile" v="plantacionesperennes02.svg"/>
+                            <prop k="svgFile" v="ign90_2.svg"/>
                             <prop k="svgFillColor" v="0,0,0,255"/>
                             <prop k="svgOutlineColor" v="0,0,0,255"/>
                             <prop k="svgOutlineWidth" v="0.3"/>
@@ -9507,7 +9507,7 @@
                             <prop k="outline_width_unit" v="MM"/>
                             <prop k="pattern_width_map_unit_scale" v="0,0"/>
                             <prop k="pattern_width_unit" v="MM"/>
-                            <prop k="svgFile" v="plantacionesperennes01.svg"/>
+                            <prop k="svgFile" v="ign90_1.svg"/>
                             <prop k="svgFillColor" v="0,0,0,255"/>
                             <prop k="svgOutlineColor" v="0,0,0,255"/>
                             <prop k="svgOutlineWidth" v="0.3"/>
