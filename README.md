@@ -1,13 +1,18 @@
 # gis
 trabajo integrador de gis 2016
 
+## Acerca del proyecto
+Este es un trabajo integrador de para la materia GIS de la UTN FRRe por lo que solo tiene fines academicos. No esta pensado para un entorno de producción ya que no tiene las validaciones necesarias, el código no es limpio, hay cosas harcodeadas, no hay mecanismos de seguridad(por ejemplo puede ser suceptible  a sql injection) entre otras cosas. De todas maneras puede ser útil para ver el uso básico de openlayers, ver como trabajar con postgis, manipular capas, trabajar con servicios wms/wfs, etc.
+
 ## Instalación
 
-Para instalar las dependencias necesarias y crear la base de datos ejecutar:
+Para instalar las dependencias necesarias, crear y cargar la base de datos, configurar apache y otras cosas respectivas al proyecto ejecutar:
 
 ```bash
 ./install/install.sh
 ```
+Este script construye el proyecto y lo deja listo para abrir la aplicación en http://localhost
+
 ## Tareas
 - [X] Implementar un servidor de BDs Espaciales y cargar en el las capas vectoriales mencionadas.
 - [X] Implementar un servidor de mapas que permita servir las capas mencionadas.
